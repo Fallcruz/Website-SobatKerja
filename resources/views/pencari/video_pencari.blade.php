@@ -57,7 +57,7 @@
           </li>
           <li class="nav-item me-2">
             <button class="btn-sign-out">
-              <a href="index.html">Sign Out</a>
+              <a href="/">Sign Out</a>
             </button>
           </li>
         </ul>
