@@ -25,6 +25,14 @@ Route::get('/home_pencari', function(){
     return view('pencari.home_pencari');
 });
 
+Route::get('/motivation_pencari', function(){
+    return view('pencari.motivation_pencari');
+});
+
+Route::get('/news_pencari', function(){
+    return view('pencari.news_pencari');
+});
+
 Route::get('/', function () {
     return view('index');
 });
