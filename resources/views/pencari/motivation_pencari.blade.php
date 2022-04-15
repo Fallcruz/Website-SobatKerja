@@ -47,7 +47,7 @@
         </ul>
       </div>
     </div>
-    <div class="box-motivasi">
+    <div class="box-motivasi" style="background-image: url(/Gambar/5.png);">
       <h3 class="txt-motivasi">Motivation</h4>
     </div>
     <div class="motivasi-card my-4">

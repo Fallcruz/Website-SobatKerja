@@ -47,7 +47,7 @@
         </ul>
       </div>
     </div>
-    <div class="box-berita">
+    <div class="box-berita" style="background-image: url(/Gambar/5.png);">
       <h3 class="txt-berita">Berita Terbaru</h4>
     </div>
     <div class="news-card my-5">

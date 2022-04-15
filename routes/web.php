@@ -33,6 +33,14 @@ Route::get('/news_pencari', function(){
     return view('pencari.news_pencari');
 });
 
+Route::get('/jobs_pencari', function(){
+    return view('pencari.jobs_pencari');
+});
+
+Route::get('/video_pencari', function(){
+    return view('pencari.video_pencari');
+});
+
 Route::get('/', function () {
     return view('index');
 });
