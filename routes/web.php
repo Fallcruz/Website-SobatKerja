@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/login_pencari', function(){
+    return view('pencari.login_pencari');
+});
+
+Route::get('/register_pencari', function(){
+    return view('pencari.register_pencari');
+});
+
+Route::get('/home_pencari', function(){
+    return view('pencari.home_pencari');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
