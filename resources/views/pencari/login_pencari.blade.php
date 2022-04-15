@@ -64,7 +64,7 @@
           />
           <label for="floatingPassword">Password</label>
         </div>
-        <a href="home_pencari.html" class="w-100 btn btn-lg btn-primary">
+        <a href="/home_pencari" class="w-100 btn btn-lg btn-primary">
           Sign in
         </a>
         <div style="margin-top: 12px;">
