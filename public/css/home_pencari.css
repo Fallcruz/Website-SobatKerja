@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800");
+
+.sobat {
+  font-weight: 700;
+  color: rgb(27, 108, 167);
+}
+.kerja {
+  font-weight: 350;
+  font-style: italic;
+}
+.sobat,
+.kerja {
+  font-family: "Work Sans";
+  font-size: 28px;
+  letter-spacing: -0.8px;
+}
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: rgb(27, 108, 167);
+  font-weight: 550;
+}
+.btn-sign-out {
+  background-color: white;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  border-color: rgb(207, 207, 207);
+  border-style: solid;
+  border-width: 1px;
+  height: 100%;
+  padding: 0 15px 2px 15px;
+}
+.btn-sign-out a {
+  text-decoration: none;
+  color: rgb(27, 108, 167);
+}
+.box-rekomendasi {
+  background-image: url("Gambar/4.png");
+  background-size: cover;
+  height: 350px;
+}
+.txt-rekomendasi {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 350;
+  color: white;
+  padding-top: 47px;
+  padding-left: 250px;
+}
+.box-rekomendasi img {
+  height: 200px;
+  padding-top: 20px;
+  padding-left: 240px;
+}
+.content {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 350;
+  padding-left: 50px;
+}
+.list-rec-job .nav-item img {
+  height: 130px;
+}
+.list-rec-news {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+.list-rec-news ul li {
+  list-style: none;
+  float: left;
+}
+.list-rec-news ul li img {
+  height: 180px;
+}

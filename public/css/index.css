@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800");
+
+.sobat {
+  font-weight: 700;
+  color: rgb(27, 108, 167);
+}
+.kerja {
+  font-weight: 350;
+  font-style: italic;
+}
+.sobat,
+.kerja {
+  font-family: "Work Sans";
+  font-size: 28px;
+  letter-spacing: -0.8px;
+}
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: rgb(27, 108, 167);
+  font-weight: 550;
+}
+.btn-pencari {
+  background-color: rgb(27, 108, 167);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  border-color: rgb(207, 207, 207);
+  border-style: solid;
+  border-width: 1px;
+  height: 100%;
+  padding: 0 15px 2px 15px;
+}
+.btn-pencari a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-pencari a:hover {
+  color: white;
+}
+
+.btn-penyedia {
+  background-color: white;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  border-color: rgb(207, 207, 207);
+  border-style: solid;
+  border-width: 1px;
+  height: 100%;
+  padding: 0 15px 2px 15px;
+}
+.btn-penyedia a {
+  text-decoration: none;
+  color: rgb(27, 108, 167);
+}
+.img-head {
+  background-image: url("4.png");
+  background-size: cover;
+  height: 350px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+/*Isi Home*/
+.headline-home {
+  margin-top: 50px;
+}
+.garis-biru {
+  margin-top: 40px;
+  width: 60px;
+  height: 5px;
+  background-color: rgb(27, 108, 167);
+  border-radius: 10px;
+}
+.judul-home {
+  font-family: "Work Sans";
+  font-size: 30px;
+  font-weight: 600;
+  padding-top: 20px;
+}
+.desc-home {
+  font-family: "Work Sans";
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-right: 45px;
+}
+.headline-home .btn-about {
+  background-color: rgb(27, 108, 167);
+  color: white;
+  font-family: "Work Sans";
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  border-color: rgb(207, 207, 207);
+  border-style: solid;
+  border-width: 1px;
+  padding: 0 15px 2px 15px;
+}
