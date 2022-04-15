@@ -70,7 +70,7 @@
         <div style="margin-top: 12px;">
           <span
             >Belum punya akun ?
-            <a href="/register-penyedia">Register sekarang!</a></span
+            <a href="/register_penyedia">Register sekarang!</a></span
           >
         </div>
       </form>

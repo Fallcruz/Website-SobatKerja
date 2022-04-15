@@ -32,12 +32,12 @@
           </li>
           <li class="nav-item me-3">
             <button class="btn-pencari" type="button">
-              <a href="/login-pencari">Pencari</a>
+              <a href="/login_pencari">Pencari</a>
             </button>
           </li>
           <li class="nav-item me-2">
             <button class="btn-penyedia" type="button">
-              <a href="/login-penyedia">Penyedia</a>
+              <a href="/login_penyedia">Penyedia</a>
             </button>
           </li>
         </ul>
