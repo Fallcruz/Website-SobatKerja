@@ -26,5 +26,14 @@ Route::get('/home_pencari', function(){
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/login-penyedia', function () {
+    return view('penyedia.login_penyedia');
+});
+Route::get('/register-penyedia', function () {
+    return view('penyedia.register_penyedia');
 });
