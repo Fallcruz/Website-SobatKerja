@@ -64,7 +64,7 @@
           />
           <label for="floatingPassword">Password</label>
         </div>
-        <a href="penyedia.html" class="w-100 btn btn-lg btn-primary">
+        <a href="/home_penyedia" class="w-100 btn btn-lg btn-primary">
           Sign in
         </a>
         <div style="margin-top: 12px;">

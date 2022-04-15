@@ -53,3 +53,9 @@ Route::get('/login_penyedia', function () {
 Route::get('/register_penyedia', function () {
     return view('penyedia.register_penyedia');
 });
+Route::get('/home_penyedia', function () {
+    return view('penyedia.home_penyedia');
+});
+Route::get('/input_lowongan', function () {
+    return view('penyedia.input_lowongan');
+});
