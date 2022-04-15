@@ -19,3 +19,9 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
+Route::get('/login-penyedia', function () {
+    return view('penyedia.login_penyedia');
+});
+Route::get('/register-penyedia', function () {
+    return view('penyedia.register_penyedia');
+});
