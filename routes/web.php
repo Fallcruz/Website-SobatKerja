@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LowonganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +57,10 @@ Route::get('/register_penyedia', function () {
 Route::get('/home_penyedia', function () {
     return view('penyedia.home_penyedia');
 });
-Route::get('/input_lowongan', function () {
-    return view('penyedia.input_lowongan');
-});
+
+// Route::get('/input_lowongan', function () {
+//     return view('penyedia.input_lowongan');
+// });
+
+Route::get('/input_lowongan', [LowonganController::class, 'create']);
+Route::post('/input_lowongan', [LowonganController::class, 'store']);

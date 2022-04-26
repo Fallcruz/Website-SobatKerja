@@ -72,83 +72,94 @@
       </div>
     </div>
     <main class="form-signin">
-      <form>
+      <form action="/input_lowongan" method="POST" enctype="multipart/form-data">
+        @csrf
         <span class="sobat">Sobat</span><span class="kerja">Kerja</span>
         <h1 class="h3 mb-3 fw-normal">Masukkan Data Pekerjaan</h1>
-
+        @if(session()->has('success'))
+        <div class="alert alert-success mt-3" role="alert">
+          {{ session('success') }}
+        </div>
+        @endif
         <div class="form-floating">
           <input
             type="text"
             class="form-control"
-            id="floatingInput"
+            name="pekerjaan"
+            id="pekerjaan"
             placeholder="contoh: Software Engineer"
           />
-          <label for="floatingInput">Pekerjaan</label>
+          <label for="pekerjaan">Pekerjaan</label>
         </div>
 
         <div class="form-floating">
           <input
             type="text"
             class="form-control"
-            id="floatingInput"
+            name="nama_perusahaan"
+            id="nama_perusahaan"
             placeholder="contoh: Golek"
           />
-          <label for="floatingInput">Nama Perusahaan</label>
+          <label for="nama_perusahaan">Nama Perusahaan</label>
         </div>
 
         <div class="form-floating">
           <input
             type="text"
             class="form-control"
-            id="floatingInput"
+            name="lokasi"
+            id="lokasi"
             placeholder="contoh: Bekasi"
           />
-          <label for="floatingInput">Lokasi</label>
+          <label for="lokasi">Lokasi</label>
         </div>
 
         <div class="form-floating">
           <input
             type="text"
             class="form-control"
-            id="floatingInput"
+            name="pengalaman"
+            id="pengalaman"
             placeholder="contoh: 1 Tahun"
           />
-          <label for="floatingInput">Pengalaman Kerja</label>
+          <label for="pengalaman">Pengalaman Kerja</label>
         </div>
 
         <div class="form-floating">
           <input
             type="text"
             class="form-control"
-            id="floatingInput"
+            name="kualifikasi"
+            id="kualifikasi"
             placeholder="contoh: Sarjana (S1)"
           />
-          <label for="floatingInput">Kualifikasi</label>
+          <label for="kualifikasi">Kualifikasi</label>
         </div>
 
         <div class="form-floating">
           <input
             type="text"
             class="form-control"
-            id="floatingInput"
+            name="gaji"
+            id="gaji"
             placeholder="contoh: 40000000"
           />
-          <label for="floatingInput">Gaji</label>
+          <label for="gaji">Gaji</label>
         </div>
 
         <div class="form-floating">
           <textarea
             class="form-control"
             placeholder="Leave a comment here"
-            id="floatingTextarea2"
+            name="persyaratan"
+            id="persyaratan"
             style="height: 100px;"
           ></textarea>
-          <label for="floatingTextarea2">Persyaratan</label>
+          <label for="persyaratan">Persyaratan</label>
         </div>
-
-        <a href="penyedia.html" class="w-100 btn btn-lg btn-primary">
+        <button class="w-100 btn btn-lg btn-primary" type="submit">
           Input Lowongan Pekerjaan
-        </a>
+        </button>
       </form>
     </main>
   </body>
