@@ -56,7 +56,24 @@
       </div>
     </div>
     <h4 class="my-4" style="font-weight:350; padding-left: 50px;">Lowongan Pekerjaan :</h4>
-    <!--Row 1-->
+    <div class="container">
+      <div class="row">
+        @foreach ($list as $lowongan)
+          <div class="col-5 mb-3">
+            <div class="d-flex job-field p-3">
+              <img class="img-jobs" src="Gambar/logo-gojek.png" alt="">
+              <div style="margin-left: 35px;">
+                  <h5 style="margin-top: 10px; margin-bottom: 15px">{{ $lowongan->pekerjaan }}</h5>
+                  <p class="desc-jobs" style="margin: 0;">Company : {{ $lowongan->nama_perusahaan }}</p>
+                  <p class="desc-jobs">Location : {{ $lowongan->lokasi }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1 mb-3" style="width: 10px"></div>
+        @endforeach
+      </div>
+    </div>
+    {{-- <!--Row 1-->
     <div class="d-flex list-jobs mx-5">
       <div class="d-flex job-field p-3">
         <img class="img-jobs" src="Gambar/img-jobs-1.png" alt="">
@@ -93,7 +110,7 @@
                 <p class="desc-jobs">Location : Jakarta Utara</p>
             </div>
           </div>
-      </div>
+      </div> --}}
     <br /><br /><br />
   </body>
 </html>

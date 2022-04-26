@@ -7,6 +7,12 @@ use App\Models\Lowongan;
 
 class LowonganController extends Controller
 {
+    public function index(){
+        return view('pencari.jobs_pencari', [
+            'list' => Lowongan::all()
+        ]);
+    }
+
     public function create(){
         return view('penyedia.input_lowongan');
     }

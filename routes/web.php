@@ -34,9 +34,9 @@ Route::get('/news_pencari', function(){
     return view('pencari.news_pencari');
 });
 
-Route::get('/jobs_pencari', function(){
-    return view('pencari.jobs_pencari');
-});
+// Route::get('/jobs_pencari', function(){
+//     return view('pencari.jobs_pencari');
+// });
 
 Route::get('/video_pencari', function(){
     return view('pencari.video_pencari');
@@ -62,5 +62,6 @@ Route::get('/home_penyedia', function () {
 //     return view('penyedia.input_lowongan');
 // });
 
+Route::get('/jobs_pencari', [LowonganController::class, 'index']);
 Route::get('/input_lowongan', [LowonganController::class, 'create']);
 Route::post('/input_lowongan', [LowonganController::class, 'store']);
