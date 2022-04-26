@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LowonganController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +33,9 @@ Route::get('/motivation_pencari', function(){
 });
 
 Route::get('/news_pencari', function(){
-    return view('pencari.news_pencari');
+    return view('pencari.news_pencari', [
+        'list' => Berita::all()
+    ]);
 });
 
 // Route::get('/jobs_pencari', function(){

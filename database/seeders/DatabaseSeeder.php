@@ -50,6 +50,13 @@ class DatabaseSeeder extends Seeder
             'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae fugiat quaerat et dignissimos optio repudiandae assumenda voluptatibus illo, veritatis pariatur!',
             'gambar' => 'img-news-1.png',
         ]);
+        Berita::create([
+            'judul' => '5 Things That Can Cause Your Career To Stop, Here the Solution!',
+            'penulis' => 'Kadek Rizky Fransisca Putera',
+            'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae fugiat quaerat et dignissimos optio repudiandae assumenda voluptatibus illo, veritatis pariatur! Fuga magni ab quibusdam fugiat veritatis non rerum cum doloribus hic, placeat ut numquam harum a nihil exercitationem, aperiam aliquam deleniti labore dolores pariatur? Optio, qui praesentium. Voluptas non recusandae sapiente facilis quod corrupti debitis molestiae ut, consequuntur natus expedita in asperiores et quis ipsa incidunt? Reprehenderit aut earum accusamus, architecto totam corporis! Pariatur, debitis? Libero in dignissimos voluptatibus laudantium reprehenderit ad repellat? Natus tempore vitae, quisquam tempora, quia harum cupiditate similique iure perferendis obcaecati ea. Blanditiis expedita ut voluptas?',
+            'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae fugiat quaerat et dignissimos optio repudiandae assumenda voluptatibus illo, veritatis pariatur!',
+            'gambar' => 'img-news-2.png',
+        ]);
     }
 }
 

@@ -50,47 +50,19 @@
     <div class="box-berita" style="background-image: url(/Gambar/5.png);">
       <h3 class="txt-berita">Berita Terbaru</h4>
     </div>
-    <div class="news-card my-5">
-      <div class="d-flex news-field p-1">
-        <img class="img-news" src="/Gambar/img-news-1.png" alt="" />
-        <div class="mx-4">
-          <h5>5 Advantages of Working in a Small Company, More Achievements!</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatem perferendis laudantium vel repellendus praesentium delectus. Repellendus quisquam ipsum.</p>
-          <a href="#" class="btn btn-primary">Read Now</a>
+    <div class="container-fluid">
+      @foreach ($list as $news)
+      <div class="news-card my-5">
+        <div class="d-flex news-field p-1">
+          <img class="img-news" src="/Gambar/{{ $news->gambar }}" alt="" />
+          <div class="mx-4">
+            <h5>{{ $news->judul }}</h5>
+            <p><b>Penulis :</b> <i>{{ $news->penulis }}</i><br>{{ $news->excerpt }}</p>
+            <a href="#" class="btn btn-primary">Read Now</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="news-card my-5">
-      <div class="d-flex news-field p-1">
-        <img class="img-news" src="/Gambar/img-news-2.png" alt="" />
-        <div class="mx-4">
-          <h5>5 Things That Can Cause Your Career To Stop, Here's the Solution!</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsa dolor. Qui dolores veritatis rerum adipisci dignissimos voluptatem consequatur. Obcaecati, asperiores officia delectus repudiandae illum hic.</p>
-          <a href="#" class="btn btn-primary">Read Now</a>
-        </div>
-      </div>
-    </div>
-    <div class="news-card my-5">
-      <div class="d-flex news-field p-1">
-        <img class="img-news" src="/Gambar/img-news-3.png" alt="" />
-        <div class="mx-4">
-          <h5>30 Words of Work Motivation, Inject Spirit of Work in the Middle of a Pandemic</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsa dolor. Qui dolores veritatis rerum adipisci dignissimos voluptatem consequatur. Obcaecati, asperiores officia delectus repudiandae illum hic.</p>
-          <a href="#" class="btn btn-primary">Read Now</a>
-        </div>
-      </div>
-    </div>
-    <div class="news-card my-5">
-      <div class="d-flex news-field p-1">
-        <img class="img-news" src="/Gambar/img-news-4.png" alt="" />
-        <div class="mx-4">
-          <h5>Consciously or not, these 5 things are killing your work motivation</h5>
-          <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ipsa dolor. Qui dolores veritatis rerum adipisci dignissimos voluptatem consequatur. Obcaecati, asperiores officia delectus repudiandae illum hic.
-          </p>
-          <a href="#" class="btn btn-primary">Read Now</a>
-        </div>
-      </div>
+      @endforeach
     </div>
   </body>
 </html>
