@@ -52,6 +52,9 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
+Route::get('/contact', function () {
+    return view('contact');
+});
 Route::get('/login_penyedia', function () {
     return view('penyedia.login_penyedia');
 });

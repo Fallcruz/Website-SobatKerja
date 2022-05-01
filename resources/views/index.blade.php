@@ -28,7 +28,7 @@
             <a class="nav-link" href="/about">About</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="">Contact</a>
+            <a class="nav-link" href="/contact">Contact</a>
           </li>
           <li class="nav-item me-3">
             <button class="btn-pencari" type="button">
@@ -44,8 +44,8 @@
       </div>
     </div>
     <div class="container col-lg-8 mx-auto headline-home">
-      <div class="d-flex">
-        <div>
+      <div class="row">
+        <div class="col-7">
           <div class="garis-biru"></div>
           <h3 class="judul-home">TEMPAT DIMANA KAMU MENGEMBANGKAN KARIR</h3>
           <p class="desc-home">
@@ -53,12 +53,14 @@
             mencari pekerjaan yang sesuai dengan skill yang kamu kuasai
           </p>
           <button type="button" class="btn-about px-3 py-2">
-            <a href="about.html" style="color: white; text-decoration: none;"
-              >About</a
-            >
+            <a href="/register_pencari" style="color: white; text-decoration: none;">
+              Register
+            </a>
           </button>
         </div>
-        <img src="Gambar/uwu1.png" width="300px" />
+        <div class="col-4 my-auto">
+          <img src="Gambar/uwu1.png" width="280px" />
+        </div>
       </div>
     </div>
   </body>

@@ -25,10 +25,10 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link active" href="/about">About</a>
+            <a class="nav-link" href="/about">About</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="/contact">Contact</a>
+            <a class="nav-link active" href="/contact">Contact</a>
           </li>
           <li class="nav-item me-3">
             <button class="btn-pencari" type="button">
@@ -47,17 +47,16 @@
       <div class="row">
         <div class="col-8">
           <div class="garis-biru"></div>
-          <h3 class="judul-about">ABOUT</h3>
-          <p class="desc-about">
-            Tujuan dibangunnya website ini adalah untuk memenuhi Tugas Besar
-            dari Mata Kuliah RPL Desain dan Implementasi Telkom University.
-            Website ini merupakan tempat dimana perusahaan-perusahaan dapat
-            menaruh atau membuka lowongan pekerjaan dan pencari kerja dapat
-            melihat atau bahkan melamar pekerjaan yang ia sukai.
-          </p>
+          <h3 class="judul-about">CONTACT</h3>
+          <p style="font-family: Work Sans; font-size: 14px; margin-bottom:0;">Jika anda mempunyai keluhan terhadap website kami baik itu kesalahan fitur atau menu ataupun performa website yang kurang baik, anda bisa mengkontak kami lewat list kontak yang tersedia dibawah ini.</p>
+          <ul class="desc-about">
+            <li>Admin 1 - Rafly Rhamadhan : <a href="">rafly@gmail.com</a></li>
+            <li>Admin 2 - Kadek Rizky Fransisca Putra : <a href="">kadekrizky@gmail.com</a></li>
+            <li>Admin 3 - I Made Krishna Vrindavana   : <a href="">krishna@gmail.com</a></li>
+          </ul>
         </div>
         <div class="col-4 my-auto">
-          <img src="Gambar/logo-fif.png" width="260px" />
+          <img src="Gambar/contact.png" width="280px" />
         </div>
       </div>
     </div>
