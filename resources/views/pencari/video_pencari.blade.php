@@ -33,7 +33,7 @@
     <!--Navbar Atas-->
     <div class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid px-4">
-        <a class="navbar-brand mx-4" href="/"
+        <a class="navbar-brand mx-4" href="/home_pencari"
           ><span class="sobat">Sobat</span><span class="kerja">Kerja</span></a
         >
         <ul class="navbar-nav justify-content-end">
@@ -53,7 +53,7 @@
             <a class="nav-link" href="/motivation_pencari">Motivation</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="your_profile.html">Your Profile</a>
+            <a class="nav-link" href="/your_profile">Your Profile</a>
           </li>
           <li class="nav-item me-2">
             <button class="btn-sign-out">

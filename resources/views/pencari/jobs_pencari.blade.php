@@ -17,7 +17,7 @@
     <!--Navbar Atas-->
     <div class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid px-4">
-        <a class="navbar-brand mx-4" href="/"
+        <a class="navbar-brand mx-4" href="/home_pencari"
           ><span class="sobat">Sobat</span><span class="kerja">Kerja</span></a
         >
         <ul class="navbar-nav justify-content-end">
@@ -37,7 +37,7 @@
             <a class="nav-link" href="/motivation_pencari">Motivation</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="your_profile.html">Your Profile</a>
+            <a class="nav-link" href="/your_profile">Your Profile</a>
           </li>
           <li class="nav-item me-2">
             <button class="btn-sign-out">
@@ -73,44 +73,7 @@
         @endforeach
       </div>
     </div>
-    {{-- <!--Row 1-->
-    <div class="d-flex list-jobs mx-5">
-      <div class="d-flex job-field p-3">
-        <img class="img-jobs" src="Gambar/img-jobs-1.png" alt="">
-        <div style="margin-left: 35px;">
-            <h5 style="margin-top: 10px; margin-bottom: 15px">Web Developer</h5>
-            <p class="desc-jobs" style="margin: 0;">Company : Astra Internasional</p>
-            <p class="desc-jobs">Location : Jakarta Utara</p>
-        </div>
-      </div>
-      <div class="d-flex job-field mx-4 p-3">
-          <img class="img-jobs" src="Gambar/img-jobs-2.png" alt="">
-          <div style="margin-left: 35px;">
-              <h5 style="margin-top: 10px; margin-bottom: 15px">Web Developer</h5>
-              <p class="desc-jobs" style="margin: 0;">Company : Astra Internasional</p>
-              <p class="desc-jobs">Location : Jakarta Utara</p>
-          </div>
-        </div>
-    </div>
-    <!--Row 2-->
-    <div class="d-flex list-jobs mx-5 my-4">
-        <div class="d-flex job-field p-3">
-          <img class="img-jobs" src="Gambar/img-jobs-3.png" alt="">
-          <div style="margin-left: 35px;">
-              <h5 style="margin-top: 10px; margin-bottom: 15px">Web Developer</h5>
-              <p class="desc-jobs" style="margin: 0;">Company : Astra Internasional</p>
-              <p class="desc-jobs">Location : Jakarta Utara</p>
-          </div>
-        </div>
-        <div class="d-flex job-field mx-4 p-3">
-            <img class="img-jobs" src="Gambar/img-jobs-4.png" alt="">
-            <div style="margin-left: 35px;">
-                <h5 style="margin-top: 10px; margin-bottom: 15px">Web Developer</h5>
-                <p class="desc-jobs" style="margin: 0;">Company : Astra Internasional</p>
-                <p class="desc-jobs">Location : Jakarta Utara</p>
-            </div>
-          </div>
-      </div> --}}
+    
     <br /><br /><br />
   </body>
 </html>

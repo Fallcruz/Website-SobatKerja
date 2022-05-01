@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SobatKerja - Motivation</title>
-    <link rel="stylesheet" href="/css/motivation_pencari.css" />
+    <title>SobatKerja - Profile</title>
+    <link rel="stylesheet" href="/css/profil_pencari.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -34,10 +34,10 @@
             <a class="nav-link" href="/video_pencari">Video</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link active" href="/motivation_pencari">Motivation</a>
+            <a class="nav-link" href="/motivation_pencari">Motivation</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="/your_profile">Your Profile</a>
+            <a class="nav-link active" href="/your_profile">Your Profile</a>
           </li>
           <li class="nav-item me-2">
             <button class="btn-sign-out">
@@ -47,18 +47,18 @@
         </ul>
       </div>
     </div>
-    <div class="box-motivasi" style="background-image: url(/Gambar/5.png);">
-      <h3 class="txt-motivasi">Motivation</h4>
+    <div class="box-profile" style="background-image: url(/Gambar/5.png);">
+      <h3 class="txt-profile">Your Profile</h4>
     </div>
-    <div class="motivasi-card my-4">
-      <div class="d-flex motivasi-field p-1">
-        <img class="img-motivasi" src="/Gambar/img-motivation-1.png" alt="" />
-        <img class="img-motivasi" src="/Gambar/img-motivation-2.png" alt="" />
-      </div>
-      <div class="d-flex motivasi-field my-3 p-1">
-          <img class="img-motivasi" src="/Gambar/img-motivation-3.png" alt="" />
-        </div>
+    <div class="container mx-auto mt-3 text-center">
+      <img src="/Gambar/pic-profile.png" width="250px">
+      <h3 class="mt-3">Rafly Rhamadhan</h3>
     </div>
-    
+    <div class="container col-8 mx-auto mt-5">
+      <ul class="list-unstyled">
+        <li><h5>Nama : Rafly Rhamadhan </h5></li>
+      </ul>
+    </div>
+    <br><br><br>
   </body>
 </html>

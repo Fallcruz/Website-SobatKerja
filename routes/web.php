@@ -45,6 +45,9 @@ Route::get('/news_pencari', function(){
 Route::get('/video_pencari', function(){
     return view('pencari.video_pencari');
 });
+Route::get('/your_profile', function(){
+    return view('pencari.profil_pencari');
+});
 
 Route::get('/', function () {
     return view('index');
