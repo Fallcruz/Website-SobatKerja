@@ -59,7 +59,7 @@
                   <img src="/Gambar/astra.png" width="130px">
                 </div>
                 <div class="col-8" style="padding-left: 20px;">
-                  <h5 class="mt-5">Frontend Developer</h5>
+                  <h5 class="mt-5"><a href="" class="text-decoration-none" style="color: black">Frontend Developer</a></h5>
                   <p class="desc-jobs" style="margin: 0;">Company : PT Astra Internasional</p>
                   <p class="desc-jobs">Location : Jakarta Selatan</p>
                 </div>
@@ -72,7 +72,7 @@
                   <img src="/Gambar/modernland.png" width="130px">
                 </div>
                 <div class="col-8" style="padding-left: 20px;">
-                  <h5 class="mt-5">Backend Developer</h5>
+                  <h5 class="mt-5"><a href="" class="text-decoration-none" style="color: black">Backend Developer</a></h5>
                   <p class="desc-jobs" style="margin: 0;">Company : PT Modernland</p>
                   <p class="desc-jobs">Location : Jakarta Utara</p>
                 </div>
