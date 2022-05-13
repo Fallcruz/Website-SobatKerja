@@ -53,7 +53,22 @@
         {{-- <img src="/Gambar/req-job2.png" alt="" /> --}}
         <div class="container col-9 mt-4" style="margin-left: 240px;">
           <div class="row">
+            @for ($i = 0; $i < 2; $i++)
             <div class="col-5" style="background-color: white; width: 420px; height: 200px; border-radius: 20px">
+              <div class="row h-100">
+                <div class="col-4 my-auto">
+                  <img src="/Gambar/astra.png" width="130px">
+                </div>
+                <div class="col-8" style="padding-left: 30px;">
+                  <h5 class="mt-5"><a href="" class="text-decoration-none" style="color: black">{{ $list[$i]->pekerjaan }}</a></h5>
+                  <p class="desc-jobs" style="margin: 0;">Company : {{ $list[$i]->nama_perusahaan }}</p>
+                  <p class="desc-jobs">Location : {{ $list[$i]->lokasi }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-1" style="width: 20px"></div>
+            @endfor
+            {{-- <div class="col-5" style="background-color: white; width: 420px; height: 200px; border-radius: 20px">
               <div class="row h-100">
                 <div class="col-4 my-auto">
                   <img src="/Gambar/astra.png" width="130px">
@@ -77,7 +92,7 @@
                   <p class="desc-jobs">Location : Jakarta Utara</p>
                 </div>
               </div>
-            </div>
+            </div> --}}
           </div>
         </div>
       </div>
