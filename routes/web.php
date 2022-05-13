@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Berita;
+use App\Models\Lowongan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LowonganController;
 
@@ -25,7 +26,10 @@ Route::get('/register_pencari', function(){
 });
 
 Route::get('/home_pencari', function(){
-    return view('pencari.home_pencari');
+    return view('pencari.home_pencari', [
+        
+        'list' => Lowongan::all()
+    ]);
 });
 
 Route::get('/motivation_pencari', function(){
@@ -73,5 +77,5 @@ Route::get('/home_penyedia', function () {
 // });
 
 Route::get('/jobs_pencari', [LowonganController::class, 'index']);
-Route::get('/input_lowongan', [LowonganController::class, 'create']);
-Route::post('/input_lowongan', [LowonganController::class, 'store']);
+Route::get('/input_lowongan', [LowonganController::class, 'createLowongan']);
+Route::post('/input_lowongan', [LowonganController::class, 'storeData']);

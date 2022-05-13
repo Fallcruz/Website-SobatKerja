@@ -13,11 +13,11 @@ class LowonganController extends Controller
         ]);
     }
 
-    public function create(){
+    public function createLowongan(){
         return view('penyedia.input_lowongan');
     }
 
-    public function store(Request $request){
+    public function storeData(Request $request){
         $validatedData = $request->validate([
             'pekerjaan' => 'required|max:255',
             'nama_perusahaan' => 'required|max:255',
