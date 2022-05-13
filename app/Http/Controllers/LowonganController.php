@@ -28,6 +28,17 @@ class LowonganController extends Controller
             'persyaratan' => 'required',
         ]);
 
+        $waktu = "";
+            $validatedData['gambar'] = "";
+            if($file = $request->hasFile('gambar')) {
+                $file = $request->file('gambar') ;
+                $fileName = $file->getClientOriginalName() ;
+                $destinationPath = public_path().'/Gambar/logo';
+                $waktu = time();
+                $file->move($destinationPath,$waktu . $fileName);
+                $validatedData['gambar'] = $waktu . $fileName;
+            }
+        
         Lowongan::create($validatedData);
         return redirect('/input_lowongan')->with('success', 'Data berhasil disimpan');;
     }

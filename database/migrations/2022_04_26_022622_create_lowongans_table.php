@@ -22,6 +22,7 @@ class CreateLowongansTable extends Migration
             $table->string('kualifikasi');
             $table->integer('gaji');
             $table->text('persyaratan');
+            $table->string('gambar');
             $table->timestamps();
         });
     }

@@ -70,6 +70,7 @@
 }
 .img-jobs {
 	width: 120px;
+	object-fit: contain;
 }
 .desc-jobs {
 	font-size: 14px;

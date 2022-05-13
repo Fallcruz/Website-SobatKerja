@@ -158,7 +158,18 @@
           <label for="persyaratan">Persyaratan</label>
         </div>
 
-        
+        <div class="container text-start pt-3" style="border: 1px solid rgb(202, 202, 202); border-radius: 4px">
+          <label class="mb-2" for="gambar">Gambar</label>
+          <div class="col-sm-10">
+            <input type="file" class="form-control @error('gambar') is-invalid @enderror" name="gambar" id="gambar" onchange="previewImage()"/>
+            <img class="img-preview img-fluid my-3 col-sm-5">
+            @error('gambar')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+            @enderror
+          </div>
+        </div>
 
         <button class="w-100 btn btn-lg btn-primary" type="submit">
           Input Lowongan Pekerjaan

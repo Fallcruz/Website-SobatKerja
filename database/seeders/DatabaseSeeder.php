@@ -17,13 +17,14 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         Lowongan::create([
-            'pekerjaan' => 'Software Engineer',
-            'nama_perusahaan' => 'Tokopedia',
+            'pekerjaan' => 'Web Developer',
+            'nama_perusahaan' => 'Modernland Indonesia',
             'lokasi' => 'Jakarta',
             'pengalaman' => '2 tahun',
             'kualifikasi' => 'Sarjana (S1)',
-            'gaji' => 4000000,
-            'persyaratan' => 'Menguasai bidang Software Engineer',
+            'gaji' => 7000000,
+            'persyaratan' => 'Menguasai bidang Web Developer',
+            'gambar' => '1652448333modernland.png',
         ]);
         Lowongan::create([
             'pekerjaan' => 'Software Engineer',
@@ -33,6 +34,17 @@ class DatabaseSeeder extends Seeder
             'kualifikasi' => 'Sarjana (S1)',
             'gaji' => 4000000,
             'persyaratan' => 'Menguasai bidang Software Engineer',
+            'gambar' => '1652448333logo-gojek.png',
+        ]);
+        Lowongan::create([
+            'pekerjaan' => 'Software Engineer',
+            'nama_perusahaan' => 'Tokopedia',
+            'lokasi' => 'Jakarta',
+            'pengalaman' => '2 tahun',
+            'kualifikasi' => 'Sarjana (S1)',
+            'gaji' => 4000000,
+            'persyaratan' => 'Menguasai bidang Software Engineer',
+            'gambar' => '1652448333Tokopedia_logo_PNG1.png',
         ]);
         Lowongan::create([
             'pekerjaan' => 'Backend Developer',
@@ -42,15 +54,17 @@ class DatabaseSeeder extends Seeder
             'kualifikasi' => 'Sarjana (S1)',
             'gaji' => 3000000,
             'persyaratan' => 'Menguasai bidang Backend Developer',
+            'gambar' => '1652448333logo-gojek.png',
         ]);
         Lowongan::create([
             'pekerjaan' => 'Frontend Developer',
-            'nama_perusahaan' => 'Bukalapak',
+            'nama_perusahaan' => 'Astra Internasional',
             'lokasi' => 'Jakarta',
             'pengalaman' => '2 tahun',
             'kualifikasi' => 'Sarjana (S1)',
-            'gaji' => 5000000,
+            'gaji' => 7000000,
             'persyaratan' => 'Menguasai bidang Frontend Developer',
+            'gambar' => '1652448333astra.png',
         ]);
         Berita::create([
             'judul' => '5 Advantages of Working in a Small Company, More Achievements!',

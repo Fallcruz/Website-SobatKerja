@@ -61,7 +61,7 @@
         @foreach ($list as $lowongan)
           <div class="col-5 mb-3">
             <div class="d-flex job-field p-3">
-              <img class="img-jobs" src="Gambar/logo-gojek.png" alt="">
+              <img class="img-jobs" src="Gambar/logo/{{ $lowongan->gambar }}" alt="">
               <div style="margin-left: 35px;">
                   <h5 style="margin-top: 10px; margin-bottom: 15px">{{ $lowongan->pekerjaan }}</h5>
                   <p class="desc-jobs" style="margin: 0;">Company : {{ $lowongan->nama_perusahaan }}</p>
