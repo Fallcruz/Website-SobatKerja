@@ -43,6 +43,15 @@ class DatabaseSeeder extends Seeder
             'gaji' => 3000000,
             'persyaratan' => 'Menguasai bidang Backend Developer',
         ]);
+        Lowongan::create([
+            'pekerjaan' => 'Frontend Developer',
+            'nama_perusahaan' => 'Bukalapak',
+            'lokasi' => 'Jakarta',
+            'pengalaman' => '2 tahun',
+            'kualifikasi' => 'Sarjana (S1)',
+            'gaji' => 5000000,
+            'persyaratan' => 'Menguasai bidang Frontend Developer',
+        ]);
         Berita::create([
             'judul' => '5 Advantages of Working in a Small Company, More Achievements!',
             'penulis' => 'Rizky Khoiruddin',
