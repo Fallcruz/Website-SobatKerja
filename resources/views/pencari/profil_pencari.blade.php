@@ -51,7 +51,7 @@
       <h3 class="txt-profile">Your Profile</h4>
     </div>
     <div class="container mx-auto mt-3 text-center">
-      <img src="/Gambar/pic-profile.png" width="250px">
+      <img src="/Gambar/pic-profile.png" width="200px">
       <h3 class="mt-3">Fulan</h3>
     </div>
 
@@ -73,7 +73,7 @@
           </div>
           <div class="col-1 py-1">
             <a href="">
-              <img src="/Gambar/logo-edit.png" alt="" width="100%">
+              <img src="/Gambar/logo-edit.png" alt="" width="80%">
             </a>
           </div>
         </div>
@@ -92,7 +92,7 @@
           </div>
           <div class="col-1 py-1">
             <a href="">
-              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="100%">
+              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
             </a>
           </div>
         </div>
@@ -111,7 +111,7 @@
           </div>
           <div class="col-1 py-1">
             <a href="">
-              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="100%">
+              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
             </a>
           </div>
         </div>
@@ -130,7 +130,7 @@
           </div>
           <div class="col-1 py-1">
             <a href="">
-              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="100%">
+              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
             </a>
           </div>
         </div>
@@ -149,7 +149,7 @@
           </div>
           <div class="col-1 py-1">
             <a href="">
-              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="100%">
+              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
             </a>
           </div>
         </div>

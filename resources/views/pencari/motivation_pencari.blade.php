@@ -50,15 +50,19 @@
     <div class="box-motivasi" style="background-image: url(/Gambar/5.png);">
       <h3 class="txt-motivasi">Motivation</h4>
     </div>
-    <div class="motivasi-card my-4">
-      <div class="d-flex motivasi-field p-1">
-        <img class="img-motivasi" src="/Gambar/img-motivation-1.png" alt="" />
-        <img class="img-motivasi" src="/Gambar/img-motivation-2.png" alt="" />
-      </div>
-      <div class="d-flex motivasi-field my-3 p-1">
-          <img class="img-motivasi" src="/Gambar/img-motivation-3.png" alt="" />
+
+    <div class="container col-10 mx-auto my-4">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-6 mb-4">
+          <img class="img-motivasi" src="/Gambar/img-motivation-1.png" alt="" width="100%"/>
         </div>
+        <div class="col-6 mb-4">
+          <img class="img-motivasi" src="/Gambar/img-motivation-2.png" alt="" width="100%"/>
+        </div>
+        <div class="col-6 mb-4">
+          <img class="img-motivasi" src="/Gambar/img-motivation-3.png" alt="" width="100%"/>
+        </div>
+      </div>
     </div>
-    
   </body>
 </html>
