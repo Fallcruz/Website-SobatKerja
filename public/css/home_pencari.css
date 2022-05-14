@@ -39,10 +39,15 @@
 }
 .txt-rekomendasi {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 350;
+  font-weight: 500;
   color: white;
   padding-top: 47px;
   padding-left: 250px;
+}
+.box-rekomendasi .cardField {
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
 }
 /* .box-rekomendasi img {
   height: 200px;
@@ -51,12 +56,19 @@
 } */
 .content {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 350;
+  font-weight: 400;
   padding-left: 50px;
 }
 .list-rec-job .nav-item img {
   height: 130px;
 }
+
+.container .cardJob {
+  border-radius: 15px 50px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  padding-bottom: 20px;
+}
+
 .list-rec-news {
   display: flex;
   padding-top: 10px;

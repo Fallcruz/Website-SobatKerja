@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
             'kualifikasi' => 'Sarjana (S1)',
             'gaji' => 4000000,
             'persyaratan' => 'Menguasai bidang Software Engineer',
-            'gambar' => '1652448333Tokopedia_logo_PNG1.png',
+            'gambar' => '1652448333logo-tokopedia.png',
         ]);
         Lowongan::create([
             'pekerjaan' => 'Backend Developer',

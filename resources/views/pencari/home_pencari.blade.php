@@ -53,62 +53,51 @@
         {{-- <img src="/Gambar/req-job2.png" alt="" /> --}}
         <div class="container col-9 mt-4" style="margin-left: 240px;">
           <div class="row">
-            @for ($i = 0; $i < 2; $i++)
-            <div class="col-5" style="background-color: white; width: 420px; height: 200px; border-radius: 20px">
-              <div class="row h-100">
-                <div class="col-5 text-center my-auto">
-                  <img src="/Gambar/logo/{{ $list[$i]->gambar }}" width="120px">
-                </div>
-                <div class="col-7" style="padding-left: 10px;">
-                  <h5 class="mt-5"><a href="" class="text-decoration-none" style="color: black">{{ $list[$i]->pekerjaan }}</a></h5>
-                  <p class="desc-jobs" style="margin: 0;">Company : {{ $list[$i]->nama_perusahaan }}</p>
-                  <p class="desc-jobs">Location : {{ $list[$i]->lokasi }}</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-1" style="width: 20px"></div>
-            @endfor
-            {{-- <div class="col-5" style="background-color: white; width: 420px; height: 200px; border-radius: 20px">
-              <div class="row h-100">
-                <div class="col-4 my-auto">
-                  <img src="/Gambar/astra.png" width="130px">
-                </div>
-                <div class="col-8" style="padding-left: 20px;">
-                  <h5 class="mt-5"><a href="" class="text-decoration-none" style="color: black">Frontend Developer</a></h5>
-                  <p class="desc-jobs" style="margin: 0;">Company : PT Astra Internasional</p>
-                  <p class="desc-jobs">Location : Jakarta Selatan</p>
+            @foreach ($list as $lists)
+              @if ($lists->pekerjaan == "Software Engineer")
+              <div class="col-5" style="background-color: rgba(255, 255, 255, 0.902); width: 420px; height: 200px; border-radius: 20px">
+                <div class="row h-100">
+                  <div class="col-5 text-center my-auto">
+                    <img src="/Gambar/logo/{{ $lists->gambar }}" width="120px">
+                  </div>
+                  <div class="col-7 align-self-center" style="padding-left: 5px;">
+                    <h5><a href="" class="text-decoration-none" style="color: black">{{ $lists->pekerjaan }}</a></h5>
+                    <p class="desc-jobs" style="margin: 0;">Company : <span class="cardField">{{ $lists->nama_perusahaan }}</span></p>
+                    <p class="desc-jobs">Location : <span class="cardField">{{ $lists->lokasi }}</span></p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-1" style="width: 20px"></div>
-            <div class="col-5" style="background-color: white; width: 420px; height: 200px; border-radius: 20px">
-              <div class="row h-100">
-                <div class="col-4 my-auto">
-                  <img src="/Gambar/modernland.png" width="130px">
-                </div>
-                <div class="col-8" style="padding-left: 20px;">
-                  <h5 class="mt-5"><a href="" class="text-decoration-none" style="color: black">Backend Developer</a></h5>
-                  <p class="desc-jobs" style="margin: 0;">Company : PT Modernland</p>
-                  <p class="desc-jobs">Location : Jakarta Utara</p>
-                </div>
-              </div>
-            </div> --}}
+              <div class="col-1" style="width: 20px"></div>
+              @endif
+            @endforeach
           </div>
         </div>
       </div>
     </div>
     <br />
     <h4 class="content">Lowongan Pekerjaan Terbaru</h4>
-    <div class="navbar navbar-expand-lg">
-      <div class="container-fluid px-5">
-        <ul class="navbar-nav list-rec-job">
-          <li class="nav-item me-3">
-            <img src="/Gambar/rec-job-1.png" alt="" />
-          </li>
-          <li class="nav-item me-3">
-            <img src="/Gambar/rec-job-1.png" alt="" />
-          </li>
-        </ul>
+    <div class="container col-12 my-4">
+      <div class="row">
+        @for ($i = 0; $i < 3; $i++)
+        <div class="col-3 cardJob me-4">
+          <div class="container py-3 text-center" style="height: 200px">
+            <img src="/Gambar/logo/{{ $list[$i]->gambar }}" alt="" width="85%">
+          </div>
+          <div class="container px-2">
+            <h5 class="">{{ $list[$i]->pekerjaan }}</h5>
+            <div class="row d-flex justify-content-between">
+              <div class="col-10 ps-3">
+                <p class="" style="color: rgb(120, 120, 120)">{{ $list[$i]->nama_perusahaan }}</p>
+              </div>
+              <div class="col-2 text-end">
+                <a href="">
+                  <img src="/Gambar/arrow-right.png" alt="" width="75%">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        @endfor
       </div>
     </div>
     <br />
