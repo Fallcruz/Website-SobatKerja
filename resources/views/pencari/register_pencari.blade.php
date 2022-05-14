@@ -9,7 +9,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Hugo 0.88.1" />
-    <title>Register Pencari Kerja</title>
+    <title>SobatKerja - Register Pencari Kerja</title>
 
     <link rel="stylesheet" href="/css/index.css" />
 

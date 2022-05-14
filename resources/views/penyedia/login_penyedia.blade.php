@@ -9,7 +9,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Hugo 0.88.1" />
-    <title>Signin Template · Bootstrap v5.1</title>
+    <title>SobatKerja - Login Penyedia Kerja</title>
 
     <link rel="stylesheet" href="/css/index.css" />
 

@@ -71,7 +71,9 @@ Route::get('/register_penyedia', function () {
 Route::get('/home_penyedia', function () {
     return view('penyedia.home_penyedia');
 });
-
+Route::get('/daftar_pelamar', function () {
+    return view('penyedia.daftar_pelamar');
+});
 // Route::get('/input_lowongan', function () {
 //     return view('penyedia.input_lowongan');
 // });

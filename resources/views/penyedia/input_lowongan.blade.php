@@ -9,7 +9,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Hugo 0.88.1" />
-    <title>Input Lowongan</title>
+    <title>SobatKerja - Input Lowongan</title>
 
     <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/home_pencari.css" />
@@ -61,7 +61,7 @@
             <a class="nav-link active" href="/input_lowongan">Input Lowongan</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="">Daftar Pelamar</a>
+            <a class="nav-link" href="/daftar_pelamar">Daftar Pelamar</a>
           </li>
           <li class="nav-item me-2">
             <button class="btn-sign-out">
