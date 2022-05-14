@@ -81,7 +81,7 @@
           <label class="col-2 col-form-label text-end">No Telepon</label>
           <div class="col-9 px-0">
             <input 
-              type="number" 
+              type="text" 
               class="form-control px-3"
               name="telepon" 
               id="telepon"
