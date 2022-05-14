@@ -46,3 +46,17 @@
     padding-top: 33px;
     padding-left: 50px;
 }
+.container .btn-simpan {
+    background-color: rgb(27, 108, 167);
+    color: white;
+    font-family: "Work Sans";
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.container .btn-simpan:hover {
+    background-color: white;
+    color: rgb(27, 108, 167);
+    border: 2px solid rgb(27, 108, 167);
+}

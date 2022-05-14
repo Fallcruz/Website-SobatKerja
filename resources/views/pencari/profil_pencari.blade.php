@@ -52,12 +52,114 @@
     </div>
     <div class="container mx-auto mt-3 text-center">
       <img src="/Gambar/pic-profile.png" width="250px">
-      <h3 class="mt-3">Rafly Rhamadhan</h3>
+      <h3 class="mt-3">Fulan</h3>
     </div>
-    <div class="container col-8 mx-auto mt-5">
-      <ul class="list-unstyled">
-        <li><h5>Nama : Rafly Rhamadhan </h5></li>
-      </ul>
+
+    <div class="container col-lg-6 mx-auto mt-5"> 
+      <form action="" method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="row mb-2">
+          <label class="col-2 col-form-label text-end">Nama</label>
+          <div class="col-9 px-0">
+            <input 
+              type="text" 
+              class="form-control px-3"
+              name="nama" 
+              id="nama"
+              placeholder="Rizky"
+              required value="{{ old('nama') }}"
+              style="border-radius: 20px;"
+            />
+          </div>
+          <div class="col-1 py-1">
+            <a href="">
+              <img src="/Gambar/logo-edit.png" alt="" width="100%">
+            </a>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <label class="col-2 col-form-label text-end">No Telepon</label>
+          <div class="col-9 px-0">
+            <input 
+              type="number" 
+              class="form-control px-3"
+              name="telepon" 
+              id="telepon"
+              placeholder="081210101010"
+              required value="{{ old('telepon') }}"
+              style="border-radius: 20px;"
+            />
+          </div>
+          <div class="col-1 py-1">
+            <a href="">
+              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="100%">
+            </a>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <label class="col-2 col-form-label text-end">Skill</label>
+          <div class="col-9 px-0">
+            <input 
+              type="text" 
+              class="form-control px-3"
+              name="skill" 
+              id="skill"
+              placeholder="Software Engineer"
+              required value="{{ old('skill') }}"
+              style="border-radius: 20px;"
+            />
+          </div>
+          <div class="col-1 py-1">
+            <a href="">
+              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="100%">
+            </a>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <label class="col-2 col-form-label text-end">Email</label>
+          <div class="col-9 px-0">
+            <input 
+              type="email" 
+              class="form-control px-3"
+              name="email" 
+              id="email"
+              placeholder="admin@gmail.com"
+              required value="{{ old('email') }}"
+              style="border-radius: 20px;"
+            />
+          </div>
+          <div class="col-1 py-1">
+            <a href="">
+              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="100%">
+            </a>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <label class="col-2 col-form-label text-end">Password</label>
+          <div class="col-9 px-0">
+            <input 
+              type="password" 
+              class="form-control px-3"
+              name="password" 
+              id="password"
+              placeholder="admin"
+              required value="{{ old('password') }}"
+              style="border-radius: 20px;"
+            />
+          </div>
+          <div class="col-1 py-1">
+            <a href="">
+              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="100%">
+            </a>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-12 text-center mt-3">
+            <button class="btn btn-simpan" type="submit">Simpan</button>
+          </div>
+        </div>
+      </form>
     </div>
     <br><br><br>
   </body>
