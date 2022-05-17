@@ -4,7 +4,7 @@ use App\Models\Berita;
 use App\Models\Lowongan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LowonganController;
-
+use App\Models\Video;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,12 +42,10 @@ Route::get('/news_pencari', function(){
     ]);
 });
 
-// Route::get('/jobs_pencari', function(){
-//     return view('pencari.jobs_pencari');
-// });
-
 Route::get('/video_pencari', function(){
-    return view('pencari.video_pencari');
+    return view('pencari.video_pencari', [
+        'list' => Video::all()
+    ]);
 });
 Route::get('/your_profile', function(){
     return view('pencari.profil_pencari');
