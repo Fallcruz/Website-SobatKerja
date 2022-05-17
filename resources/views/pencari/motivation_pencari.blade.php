@@ -73,7 +73,11 @@
         </div>
         {{-- Membuat gambar motivasi ketiga --}}
         <div class="col-6 mb-4">
-          <img class="img-motivasi" src="/Gambar/img-motivation-3.png" alt="" width="100%"/>
+          <img class="img-motivasi" src="/Gambar/img-motivation-4.png" alt="" width="100%"/>
+        </div>
+        {{-- Membuat gambar motivasi keempat --}}
+        <div class="col-6 mb-4">
+          <img class="img-motivasi" src="/Gambar/img-motivation-5.png" alt="" width="100%"/>
         </div>
       </div>
     </div>
