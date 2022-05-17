@@ -61,22 +61,23 @@
     </div>
 
     {{-- Membuat section untuk daftar lowongan pekerjaan --}}
-    <h4 class="my-4" style="font-weight:350; padding-left: 50px;">Lowongan Pekerjaan :</h4>
+    <h4 class="my-4" style="font-weight:500; padding-left: 50px;">Lowongan Pekerjaan :</h4>
     <div class="container">
       <div class="row">
         {{-- melakukan looping untuk mendapatkan data dari database --}}
         @foreach ($list as $lowongan)
-          <div class="col-5 mb-3">
+          <div class="col-5 mb-4">
             <div class="d-flex job-field p-3">
-              <img class="img-jobs" src="Gambar/logo/{{ $lowongan->gambar }}" alt="">
-              <div style="margin-left: 35px;">
-                  <h5 style="margin-top: 10px; margin-bottom: 15px">{{ $lowongan->pekerjaan }}</h5>
+              <img class="img-jobs" src="Gambar/logo/{{ $lowongan->gambar }}" alt="logo perusahaan">
+              <div class="align-self-center py-2" style="margin-left: 35px;">
+                  <h5>{{ $lowongan->pekerjaan }}</h5>
                   <p class="desc-jobs" style="margin: 0;">Company : {{ $lowongan->nama_perusahaan }}</p>
                   <p class="desc-jobs">Location : {{ $lowongan->lokasi }}</p>
+                  <button class="btn btn-view" type="submit">View</button>
               </div>
             </div>
           </div>
-          <div class="col-1 mb-3" style="width: 10px"></div>
+          <div class="col-1" style="width: 30px"></div>
         @endforeach
       </div>
     </div>

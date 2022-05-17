@@ -65,7 +65,7 @@
 }
 .job-field {
 	width: 480px;
-	border: 0.4px solid rgb(207, 207, 207);
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 	border-radius: 8px;
 }
 .img-jobs {
@@ -75,4 +75,17 @@
 .desc-jobs {
 	font-size: 14px;
 	padding: 3px 0;
+}
+.container .btn-view {
+    background-color: rgb(27, 108, 167);
+    color: white;
+    font-family: "Work Sans";
+	font-size: 14px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.container .btn-view:hover {
+    color: white;
 }
