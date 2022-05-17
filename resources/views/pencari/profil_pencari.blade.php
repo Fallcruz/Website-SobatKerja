@@ -76,12 +76,12 @@
               name="nama" 
               id="nama"
               placeholder="Fulan"
-              required value="{{ old('nama') }}"
+              readonly value="{{ old('nama') }}"
               style="border-radius: 20px;"
             />
           </div>
           <div class="col-1 py-1">
-            <a href="">
+            <a onclick="setReadonly()">
               <img src="/Gambar/logo-edit.png" alt="" width="80%">
             </a>
           </div>
@@ -95,12 +95,12 @@
               name="telepon" 
               id="telepon"
               placeholder="081210101010"
-              required value="{{ old('telepon') }}"
+              readonly value="{{ old('telepon') }}"
               style="border-radius: 20px;"
             />
           </div>
           <div class="col-1 py-1">
-            <a href="">
+            <a onclick="setReadonly()">
               <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
             </a>
           </div>
@@ -114,12 +114,12 @@
               name="skill" 
               id="skill"
               placeholder="Software Engineer"
-              required value="{{ old('skill') }}"
+              readonly value="{{ old('skill') }}"
               style="border-radius: 20px;"
             />
           </div>
           <div class="col-1 py-1">
-            <a href="">
+            <a onclick="setReadonly()">
               <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
             </a>
           </div>
@@ -133,12 +133,12 @@
               name="email" 
               id="email"
               placeholder="fulan@gmail.com"
-              required value="{{ old('email') }}"
+              readonly value="{{ old('email') }}"
               style="border-radius: 20px;"
             />
           </div>
           <div class="col-1 py-1">
-            <a href="">
+            <a onclick="setReadonly()">
               <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
             </a>
           </div>
@@ -152,12 +152,12 @@
               name="password" 
               id="password"
               placeholder="fulan123"
-              required value="{{ old('password') }}"
+              readonly value="{{ old('password') }}"
               style="border-radius: 20px;"
             />
           </div>
           <div class="col-1 py-1">
-            <a href="">
+            <a onclick="setReadonly()">
               <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
             </a>
           </div>
@@ -172,4 +172,9 @@
     </div>
     <br><br><br>
   </body>
+  <script>
+    function setReadonly() {
+      document.getElementById("nama").readOnly = false;
+    }
+    </script>
 </html>
