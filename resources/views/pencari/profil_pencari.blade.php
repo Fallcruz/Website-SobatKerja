@@ -80,8 +80,8 @@
               style="border-radius: 20px;"
             />
           </div>
-          <div class="col-2 py-1 btnEdit">
-            <a onclick="namaSetReadonly()">
+          <div class="col-2 py-1">
+            <a class="btnEdit" onclick="namaSetReadonly()">
               <img src="/Gambar/logo-edit-circle.png" alt="" width="46%">
             </a>
           </div>
@@ -144,7 +144,7 @@
         </div>
         
         <div class="row">
-          <div class="col-12 text-center mt-2">
+          <div class="col-12 text-center mt-3">
             <button class="btn btn-simpan" type="submit">Simpan</button>
           </div>
         </div>
