@@ -1,3 +1,10 @@
+{{-- 
+  Tujuan Kode: Membuat tampilan halaman contact website SobatKerja
+  Deskripsi:
+  Halaman ini berisi informasi-informasi contact yang dapat dihubungi
+--}}
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,28 +21,34 @@
     />
   </head>
   <body>
-    <!--Navbar Atas-->
+    {{-- Navbar --}}
     <div class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid px-4">
+        {{-- Tombol Untuk Kembali Ke Halaman Utama (Home) --}}
         <a class="navbar-brand mx-4" href="/"
           ><span class="sobat">Sobat</span><span class="kerja">Kerja</span></a
         >
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item me-4">
+            {{-- Tombol Untuk Kembali Ke Halaman Utama (Home) --}}
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item me-4">
+            {{-- Tombol Untuk Menuju Halaman About --}}
             <a class="nav-link" href="/about">About</a>
           </li>
           <li class="nav-item me-4">
+            {{-- Tombol Untuk Menuju Halaman Contact --}}
             <a class="nav-link active" href="/contact">Contact</a>
           </li>
           <li class="nav-item me-3">
+            {{-- Tombol Untuk Menuju Halaman Login Pencari Kerja --}}
             <button class="btn-pencari" type="button">
               <a href="/login_pencari">Pencari</a>
             </button>
           </li>
           <li class="nav-item me-2">
+            {{-- Tombol Untuk Menuju Halaman Login Penyedia Kerja --}}
             <button class="btn-penyedia" type="button">
               <a href="/login_penyedia">Penyedia</a>
             </button>
@@ -43,12 +56,18 @@
         </ul>
       </div>
     </div>
+
+    {{-- Container Contact --}}
     <div class="container col-lg-8 mx-auto headline-about">
       <div class="row">
         <div class="col-8">
           <div class="garis-biru"></div>
+          {{-- Header Contact --}}
           <h3 class="judul-about">CONTACT</h3>
+          {{-- Deskripsi Contact --}}
           <p style="font-family: Work Sans; font-size: 14px; margin-bottom:0;">Jika anda mempunyai keluhan terhadap website kami baik itu kesalahan fitur atau menu ataupun performa website yang kurang baik, anda bisa mengkontak kami lewat list kontak yang tersedia dibawah ini.</p>
+
+          {{-- List Contact Yang Bisa Dihubungi --}}
           <ul class="desc-about">
             <li>Admin 1 - Rafly Rhamadhan : <a href="">rafly@gmail.com</a></li>
             <li>Admin 2 - Kadek Rizky Fransisca Putra : <a href="">kadekrizky@gmail.com</a></li>

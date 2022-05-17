@@ -1,3 +1,10 @@
+{{-- 
+  Tujuan Kode: Membuat tampilan halaman registrasi penyedia kerja
+  Deskripsi:
+  Halaman ini nantinya akan digunakan oleh para penyedia kerja untuk melakukan pendaftaran akun
+  atau melakukan registrasi akun agar nantinya mereka dapat mengupload lowongan pekerjaan
+--}}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,6 +28,7 @@
       crossorigin="anonymous"
     />
 
+    {{-- CSS Placeholder Image --}}
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -30,6 +38,7 @@
         user-select: none;
       }
 
+      /* CSS ini akan berfungsi ketika lebar layar >= 768px */
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -42,10 +51,13 @@
   </head>
   <body class="text-center">
     <main class="form-signin">
+      {{-- Untuk membuat Form Registrasi Penyedia Kerja --}}
       <form>
         <span class="sobat">Sobat</span><span class="kerja">Kerja</span>
+        {{-- Header Form Registrasi --}}
         <h1 class="h3 mb-3 fw-normal">Please Register</h1>
 
+        {{-- Text Field Form Registrasi --}}
         <div class="form-floating">
           <input
             type="text"
@@ -56,6 +68,7 @@
           <label for="floatingInput">Nama Perusahaan</label>
         </div>
 
+        {{-- Text Field Form Registrasi --}}
         <div class="form-floating">
           <input
             type="text"
@@ -66,6 +79,7 @@
           <label for="floatingInput">Lokasi Perusahaan</label>
         </div>
 
+        {{-- Text Field Form Registrasi --}}
         <div class="form-floating">
           <input
             type="email"
@@ -75,6 +89,8 @@
           />
           <label for="floatingInput">Email Perusahaan</label>
         </div>
+
+        {{-- Text Field Form Registrasi --}}
         <div class="form-floating">
           <input
             type="password"
@@ -84,9 +100,13 @@
           />
           <label for="floatingPassword">Password</label>
         </div>
+
+        {{-- Tombol Submit Form Registrasi --}}
         <a href="/home_penyedia" class="w-100 btn btn-lg btn-primary">
           Register
         </a>
+
+        {{-- Tombol Untuk Menuju Halaman Login --}}
         <div style="margin-top: 12px;">
           <span
             >Already have account ?
