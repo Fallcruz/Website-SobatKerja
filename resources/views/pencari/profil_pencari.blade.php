@@ -67,9 +67,9 @@
     <div class="container col-lg-6 mx-auto mt-5"> 
       <form action="" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="row mb-2">
+        <div class="row">
           <label class="col-2 col-form-label text-end">Nama</label>
-          <div class="col-9 px-0">
+          <div class="col-8 px-0">
             <input 
               type="text" 
               class="form-control px-3"
@@ -80,15 +80,15 @@
               style="border-radius: 20px;"
             />
           </div>
-          <div class="col-1 py-1">
-            <a onclick="setReadonly()">
-              <img src="/Gambar/logo-edit.png" alt="" width="80%">
+          <div class="col-2 py-1 btnEdit">
+            <a onclick="namaSetReadonly()">
+              <img src="/Gambar/logo-edit-circle.png" alt="" width="46%">
             </a>
           </div>
         </div>
         <div class="row mb-2">
           <label class="col-2 col-form-label text-end">No Telepon</label>
-          <div class="col-9 px-0">
+          <div class="col-8 px-0">
             <input 
               type="text" 
               class="form-control px-3"
@@ -99,15 +99,10 @@
               style="border-radius: 20px;"
             />
           </div>
-          <div class="col-1 py-1">
-            <a onclick="setReadonly()">
-              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
-            </a>
-          </div>
         </div>
         <div class="row mb-2">
           <label class="col-2 col-form-label text-end">Skill</label>
-          <div class="col-9 px-0">
+          <div class="col-8 px-0">
             <input 
               type="text" 
               class="form-control px-3"
@@ -118,15 +113,10 @@
               style="border-radius: 20px;"
             />
           </div>
-          <div class="col-1 py-1">
-            <a onclick="setReadonly()">
-              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
-            </a>
-          </div>
         </div>
         <div class="row mb-2">
           <label class="col-2 col-form-label text-end">Email</label>
-          <div class="col-9 px-0">
+          <div class="col-8 px-0">
             <input 
               type="email" 
               class="form-control px-3"
@@ -137,15 +127,10 @@
               style="border-radius: 20px;"
             />
           </div>
-          <div class="col-1 py-1">
-            <a onclick="setReadonly()">
-              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
-            </a>
-          </div>
         </div>
         <div class="row mb-2">
           <label class="col-2 col-form-label text-end">Password</label>
-          <div class="col-9 px-0">
+          <div class="col-8 px-0">
             <input 
               type="password" 
               class="form-control px-3"
@@ -156,15 +141,10 @@
               style="border-radius: 20px;"
             />
           </div>
-          <div class="col-1 py-1">
-            <a onclick="setReadonly()">
-              <img class="text-end" src="/Gambar/logo-edit.png" alt="" width="80%">
-            </a>
-          </div>
         </div>
         
         <div class="row">
-          <div class="col-12 text-center mt-3">
+          <div class="col-12 text-center mt-2">
             <button class="btn btn-simpan" type="submit">Simpan</button>
           </div>
         </div>
@@ -173,8 +153,24 @@
     <br><br><br>
   </body>
   <script>
-    function setReadonly() {
-      document.getElementById("nama").readOnly = false;
+    var click = 0
+    function namaSetReadonly() {
+      if (click % 2 == 0){
+        document.getElementById("nama").readOnly = false;
+        document.getElementById("telepon").readOnly = false;
+        document.getElementById("skill").readOnly = false;
+        document.getElementById("email").readOnly = false;
+        document.getElementById("password").readOnly = false;
+        click += 1;
+      }
+      else {
+        document.getElementById("nama").readOnly = true;
+        document.getElementById("telepon").readOnly = true;
+        document.getElementById("skill").readOnly = true;
+        document.getElementById("email").readOnly = true;
+        document.getElementById("password").readOnly = true;
+        click += 1;
+      }
     }
     </script>
 </html>
