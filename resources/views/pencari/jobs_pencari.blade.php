@@ -17,9 +17,11 @@
     {{-- Membuat Navbar --}}
     <div class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid px-4">
-        <a class="navbar-brand mx-4" href="/home_pencari"
-          ><span class="sobat">Sobat</span><span class="kerja">Kerja</span></a
-        >
+        {{-- Logo Website --}}
+        <a class="navbar-brand mx-4" href="/home_pencari">
+          <span class="sobat">Sobat</span><span class="kerja">Kerja</span>
+        </a>
+        {{-- Membuat menu navigasi --}}
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item me-4">
             <a class="nav-link" href="/home_pencari">Home</a>

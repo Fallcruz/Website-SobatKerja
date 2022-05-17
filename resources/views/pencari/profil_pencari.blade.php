@@ -75,7 +75,7 @@
               class="form-control px-3"
               name="nama" 
               id="nama"
-              placeholder="Rizky"
+              placeholder="Fulan"
               required value="{{ old('nama') }}"
               style="border-radius: 20px;"
             />
@@ -132,7 +132,7 @@
               class="form-control px-3"
               name="email" 
               id="email"
-              placeholder="admin@gmail.com"
+              placeholder="fulan@gmail.com"
               required value="{{ old('email') }}"
               style="border-radius: 20px;"
             />
@@ -151,7 +151,7 @@
               class="form-control px-3"
               name="password" 
               id="password"
-              placeholder="admin"
+              placeholder="fulan123"
               required value="{{ old('password') }}"
               style="border-radius: 20px;"
             />
