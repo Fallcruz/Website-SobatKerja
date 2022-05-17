@@ -58,7 +58,7 @@
         <div class="container col-9 mt-4" style="margin-left: 240px;">
           <div class="row">
             {{-- melakukan looping untuk mendapatkan data dari database --}}
-            @foreach ($list as $lists)
+            @foreach ($listJobs as $lists)
               {{-- melakukan pengkondisian jika nama pekerjaan = Software Engineer maka akan di tampilkan --}}
               @if ($lists->pekerjaan == "Software Engineer")
               {{-- membuat card yang berisi data lowongan pekerjaan --}}
@@ -85,19 +85,19 @@
 
     {{-- Membuat section untuk lowongan pekerjaan terbaru --}}
     <h4 class="content">Lowongan Pekerjaan Terbaru</h4>
-    <div class="container col-12 my-4">
+    <div class="container my-4">
       <div class="row">
         {{-- melakukan looping sebanyak 3 kali untuk mendapatkan data dari database --}}
         @for ($i = 0; $i < 3; $i++)
         <div class="col-3 cardJob me-4">
           <div class="container py-3 text-center" style="height: 200px">
-            <img src="/Gambar/logo/{{ $list[$i]->gambar }}" alt="" width="85%">
+            <img src="/Gambar/logo/{{ $listJobs[$i]->gambar }}" alt="" width="85%">
           </div>
           <div class="container px-2">
-            <h5 class="">{{ $list[$i]->pekerjaan }}</h5>
+            <h5>{{ $listJobs[$i]->pekerjaan }}</h5>
             <div class="row d-flex justify-content-between">
               <div class="col-10 ps-3">
-                <p class="" style="color: rgb(120, 120, 120)">{{ $list[$i]->nama_perusahaan }}</p>
+                <p style="color: rgb(120, 120, 120)">{{ $listJobs[$i]->nama_perusahaan }}</p>
               </div>
               <div class="col-2 text-end">
                 <a href="">
@@ -114,22 +114,32 @@
 
     {{-- Membuat section untuk Berita terbaru --}}
     <h4 class="content">Berita Terbaru</h4>
-    <div class="list-rec-news">
-      <ul>
-        <li>
-          <img src="/Gambar/news1.png" alt="" />
-        </li>
-        <li>
-          <img src="/Gambar/news2.png" alt="" />
-        </li>
-        <li>
-          <img src="/Gambar/news3.png" alt="" />
-        </li>
-        <li>
-          <img src="/Gambar/news4.png" alt="" />
-        </li>
-      </ul>
+    <div class="container my-4">
+      <div class="row">
+        @for ($i = 0; $i < 2; $i++)
+        <div class="col-5 cardNews px-0 me-4">
+          <div class="container text-center px-0">
+            <img src="/Gambar/{{ $listNews[$i]->gambar }}" alt="" width="100%">
+          </div>
+          <div class="container px-3 py-3">
+            <h5>{{ $listNews[$i]->judul }}</h5>
+            <div class="row d-flex justify-content-between">
+              <div class="col-10 d-flex align-items-center my-2">
+                <img class="me-3" src="/Gambar/time.png" alt="" width="20px" height="20px">
+                <p class="m-0" style="color: rgb(120, 120, 120)">{{ $listNews[$i]->created_at }}</p>
+              </div>
+              <div class="col-2 text-center align-self-center">
+                <a href="">
+                  <img src="/Gambar/arrow-right.png" alt="" width="32%">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        @endfor
+      </div>
     </div>
-    <br /><br /><br /><br /><br /><br /><br />
+    
+    <br /><br /><br /><br />
   </body>
 </html>

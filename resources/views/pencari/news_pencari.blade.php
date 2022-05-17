@@ -75,7 +75,7 @@
             {{-- Memaut teks  penulis dan excerpt sesuai index yang di looping dalam database --}}
             <p><b>Penulis :</b> <i>{{ $news->penulis }}</i><br>{{ $news->excerpt }}</p>
             {{-- Membuat tombol Read Now --}}
-            <a href="#" class="btn btn-primary">Read Now</a>
+            <a href="#" class="btn btn-readnow">Read Now</a>
           </div>
         </div>
       </div>

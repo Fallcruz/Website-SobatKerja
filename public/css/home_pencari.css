@@ -59,16 +59,23 @@
   font-weight: 400;
   padding-left: 50px;
 }
-.list-rec-job .nav-item img {
-  height: 130px;
-}
-
 .container .cardJob {
   border-radius: 15px 50px;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   padding-bottom: 20px;
 }
+.desc-jobs {
+	font-size: 14px;
+	padding: 3px 0;
+}
 
+.container .cardNews {
+  border-radius: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.container .cardNews img {
+  border-radius: 15px 15px 0 0;
+}
 .list-rec-news {
   display: flex;
   padding-top: 10px;
@@ -80,8 +87,4 @@
 }
 .list-rec-news ul li img {
   height: 180px;
-}
-.desc-jobs {
-	font-size: 14px;
-	padding: 3px 0;
 }

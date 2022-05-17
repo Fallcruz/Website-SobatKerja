@@ -61,7 +61,7 @@
     </div>
 
     {{-- Membuat section untuk daftar lowongan pekerjaan --}}
-    <h4 class="my-4" style="font-weight:500; padding-left: 50px;">Lowongan Pekerjaan :</h4>
+    <h4 class="my-4" style="font-weight:400; padding-left: 50px;">Lowongan Pekerjaan :</h4>
     <div class="container">
       <div class="row">
         {{-- melakukan looping untuk mendapatkan data dari database --}}

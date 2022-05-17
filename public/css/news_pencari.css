@@ -50,11 +50,24 @@
   padding-left: 50px;
 }
 .news-card .img-news {
-  width: 220px;
-  height: 140px;
+  width: 240px;
+  height: 160px;
   border-radius: 20px;
 }
 .news-field {
   font-family: "Work sans";
   background-color: white;
+}
+.news-card .btn-readnow {
+  background-color: rgb(27, 108, 167);
+  color: white;
+  font-size: 14px;
+  font-family: "Work Sans";
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.news-card .btn-readnow:hover {
+  color: white;
 }

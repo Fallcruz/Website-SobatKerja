@@ -27,8 +27,8 @@ Route::get('/register_pencari', function(){
 
 Route::get('/home_pencari', function(){
     return view('pencari.home_pencari', [
-        
-        'list' => Lowongan::all()
+        'listJobs' => Lowongan::all(),
+        'listNews' => Berita::all()
     ]);
 });
 
