@@ -14,12 +14,14 @@
     />
   </head>
   <body>
-    <!--Navbar Atas-->
+    {{-- Membuat Navbar --}}
     <div class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid px-4">
-        <a class="navbar-brand mx-4" href="index.html"
-          ><span class="sobat">Sobat</span><span class="kerja">Kerja</span></a
-        >
+        {{-- Logo Website --}}
+        <a class="navbar-brand mx-4" href="index.html">
+          <span class="sobat">Sobat</span><span class="kerja">Kerja</span>
+        </a>
+        {{-- Membuat menu navigasi --}}
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item me-4">
             <a class="nav-link active" href="">Home</a>
@@ -40,6 +42,7 @@
             <a class="nav-link" href="/your_profile">Your Profile</a>
           </li>
           <li class="nav-item me-2">
+            {{-- membuat button sign out untuk keluar dari akun --}}
             <button class="btn-sign-out">
               <a href="/">Sign Out</a>
             </button>
@@ -47,13 +50,18 @@
         </ul>
       </div>
     </div>
+
+    {{-- Membuat section untuk rekomendasi pekerjaan --}}
     <div class="box-rekomendasi" style="background-image: url(/Gambar/4.png);">
       <div>
         <h3 class="txt-rekomendasi">Rekomendasi Pekerjaan Untuk Anda</h3>
         <div class="container col-9 mt-4" style="margin-left: 240px;">
           <div class="row">
+            {{-- melakukan looping untuk mendapatkan data dari database --}}
             @foreach ($list as $lists)
+              {{-- melakukan pengkondisian jika nama pekerjaan = Software Engineer maka akan di tampilkan --}}
               @if ($lists->pekerjaan == "Software Engineer")
+              {{-- membuat card yang berisi data lowongan pekerjaan --}}
               <div class="col-5" style="background-color: rgba(255, 255, 255, 0.902); width: 420px; height: 200px; border-radius: 20px">
                 <div class="row h-100">
                   <div class="col-5 text-center my-auto">
@@ -73,10 +81,13 @@
         </div>
       </div>
     </div>
-    <br />
+    <br/>
+
+    {{-- Membuat section untuk lowongan pekerjaan terbaru --}}
     <h4 class="content">Lowongan Pekerjaan Terbaru</h4>
     <div class="container col-12 my-4">
       <div class="row">
+        {{-- melakukan looping sebanyak 3 kali untuk mendapatkan data dari database --}}
         @for ($i = 0; $i < 3; $i++)
         <div class="col-3 cardJob me-4">
           <div class="container py-3 text-center" style="height: 200px">
@@ -99,7 +110,9 @@
         @endfor
       </div>
     </div>
-    <br />
+    <br/>
+
+    {{-- Membuat section untuk Berita terbaru --}}
     <h4 class="content">Berita Terbaru</h4>
     <div class="list-rec-news">
       <ul>

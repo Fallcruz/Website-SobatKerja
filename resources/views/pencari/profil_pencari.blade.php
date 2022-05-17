@@ -14,12 +14,15 @@
     />
   </head>
   <body>
-    <!--Navbar Atas-->
+    {{-- Membuat Navbar --}}
     <div class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid px-4">
-        <a class="navbar-brand mx-4" href="/home_pencari"
-          ><span class="sobat">Sobat</span><span class="kerja">Kerja</span></a
-        >
+        {{-- Logo Website --}}
+        <a class="navbar-brand mx-4" href="/home_pencari">
+          <span class="sobat">Sobat</span><span class="kerja">Kerja</span>
+        </a>
+
+        {{-- Membuat menu navigasi --}}
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item me-4">
             <a class="nav-link" href="/home_pencari">Home</a>
@@ -40,6 +43,7 @@
             <a class="nav-link active" href="/your_profile">Your Profile</a>
           </li>
           <li class="nav-item me-2">
+            {{-- membuat button sign out untuk keluar dari akun --}}
             <button class="btn-sign-out">
               <a href="/">Sign Out</a>
             </button>
@@ -47,14 +51,19 @@
         </ul>
       </div>
     </div>
+
+
     <div class="box-profile" style="background-image: url(/Gambar/5.png);">
       <h3 class="txt-profile">Your Profile</h4>
     </div>
+
+    {{-- Membuat profile picture user --}}
     <div class="container mx-auto mt-3 text-center">
       <img src="/Gambar/pic-profile.png" width="200px">
       <h3 class="mt-3">Fulan</h3>
     </div>
 
+    {{-- Membuat form yang menampung data dari akun user untuk ditampilkan dan dapat di edit sesuai keinginan --}}
     <div class="container col-lg-6 mx-auto mt-5"> 
       <form action="" method="POST" enctype="multipart/form-data">
         @csrf

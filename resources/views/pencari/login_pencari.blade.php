@@ -41,11 +41,12 @@
     <link href="/css/signin.css" rel="stylesheet" />
   </head>
   <body class="text-center">
+
+    {{-- Membuat form yang menampung data akun user untuk melakukan sign in kedalam website SobatKerja --}}
     <main class="form-signin">
       <form>
         <span class="sobat">Sobat</span><span class="kerja">Kerja</span>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
         <div class="form-floating">
           <input
             type="email"

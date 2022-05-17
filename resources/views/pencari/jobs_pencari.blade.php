@@ -14,7 +14,7 @@
     />
   </head>
   <body>
-    <!--Navbar Atas-->
+    {{-- Membuat Navbar --}}
     <div class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid px-4">
         <a class="navbar-brand mx-4" href="/home_pencari"
@@ -47,6 +47,8 @@
         </ul>
       </div>
     </div>
+
+    {{-- Membuat section untuk pencarian lowongan pekerjaan --}}
     <div class="box-pencarian" style="background-image: url(/Gambar/6.png);">
       <h3 class="txt-pencarian">Pencarian Lowongan</h4>
       <div class="d-flex p-1">
@@ -55,9 +57,12 @@
         <button type="submit" class="jobs-btn">Find Jobs</button>
       </div>
     </div>
+
+    {{-- Membuat section untuk daftar lowongan pekerjaan --}}
     <h4 class="my-4" style="font-weight:350; padding-left: 50px;">Lowongan Pekerjaan :</h4>
     <div class="container">
       <div class="row">
+        {{-- melakukan looping untuk mendapatkan data dari database --}}
         @foreach ($list as $lowongan)
           <div class="col-5 mb-3">
             <div class="d-flex job-field p-3">
