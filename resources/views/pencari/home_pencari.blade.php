@@ -50,7 +50,6 @@
     <div class="box-rekomendasi" style="background-image: url(/Gambar/4.png);">
       <div>
         <h3 class="txt-rekomendasi">Rekomendasi Pekerjaan Untuk Anda</h3>
-        {{-- <img src="/Gambar/req-job2.png" alt="" /> --}}
         <div class="container col-9 mt-4" style="margin-left: 240px;">
           <div class="row">
             @foreach ($list as $lists)
