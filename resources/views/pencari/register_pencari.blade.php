@@ -10,7 +10,7 @@
     />
     <meta name="generator" content="Hugo 0.88.1" />
     <title>SobatKerja - Register Pencari Kerja</title>
-
+    {{-- Pengkoneksian file css --}}
     <link rel="stylesheet" href="/css/index.css" />
 
     <!-- Bootstrap core CSS -->
@@ -20,7 +20,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-
+    {{-- Melakukan setting css pada halaman register pencari --}}
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -40,12 +40,15 @@
     <!-- Custom styles for this template -->
     <link href="/css/signin.css" rel="stylesheet" />
   </head>
+  {{-- Membuat form register untuk pengisian data pencari --}}
   <body class="text-center">
     <main class="form-signin">
       <form>
+        {{-- Menampilkan teks sobat kerja dan please register --}}
         <span class="sobat">Sobat</span><span class="kerja">Kerja</span>
         <h1 class="h3 mb-3 fw-normal">Please Register</h1>
 
+        {{-- Pembuatan teks field untuk nama --}}
         <div class="form-floating">
           <input
             type="text"
@@ -55,7 +58,7 @@
           />
           <label for="floatingInput">Full Name</label>
         </div>
-
+        {{-- Pembuatan teks field untuk nomor telepon --}}
         <div class="form-floating">
           <input
             type="text"
@@ -65,7 +68,7 @@
           />
           <label for="floatingInput">Phone Number</label>
         </div>
-
+        {{-- Pembuatan dropdown untuk skill --}}
         <div class="input-group" style="height: 50px;">
           <label class="input-group-text" for="inputGroupSelect01"
             >Skills</label
@@ -77,7 +80,7 @@
             <option value="3">UI/UX Designer</option>
           </select>
         </div>
-
+        {{-- Pembuatan teks field untuk email address --}}
         <div class="form-floating">
           <input
             type="email"
@@ -87,6 +90,7 @@
           />
           <label for="floatingInput">Email address</label>
         </div>
+        {{-- Pembuatan teks field untuk password --}}
         <div class="form-floating">
           <input
             type="password"
@@ -96,9 +100,11 @@
           />
           <label for="floatingPassword">Password</label>
         </div>
+        {{-- Membuat tombol register yang jika di klik akan mengarahkan ke halaman home_pencari --}}
         <a href="/home_pencari" class="w-100 btn btn-lg btn-primary">
           Register
         </a>
+        {{-- Membuat teks already have account ? dan Login now yang akan mengarahkan ke halaman login_pencari --}}
         <div style="margin-top: 12px;">
           <span
             >Already have account ?

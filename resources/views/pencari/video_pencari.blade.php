@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
   </head>
+  {{-- Melakukan setting css pada halaman register pencari --}}
   <style>
     .box-video {
       color: white;
@@ -33,28 +34,37 @@
     <!--Navbar Atas-->
     <div class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid px-4">
+        {{-- menampilkan logo sobat kerja yang jika di klik akan nge-direct ke laman home --}}
         <a class="navbar-brand mx-4" href="/home_pencari"
           ><span class="sobat">Sobat</span><span class="kerja">Kerja</span></a
         >
+        {{-- membuat item navbar --}}
         <ul class="navbar-nav justify-content-end">
+          {{-- membuat tombol Home yang mengarah ke halaman home --}}
           <li class="nav-item me-4">
             <a class="nav-link" href="/home_pencari">Home</a>
           </li>
+          {{-- membuat tombol Jobs yang mengarah ke halaman jobs --}}
           <li class="nav-item me-4">
             <a class="nav-link" href="/jobs_pencari">Jobs</a>
           </li>
+          {{-- membuat tombol News yang mengarah ke halaman news --}}
           <li class="nav-item me-4">
             <a class="nav-link" href="/news_pencari">News</a>
           </li>
+          {{-- membuat tombol Video yang mengarah ke halaman video --}}
           <li class="nav-item me-4">
             <a class="nav-link active" href="/video_pencari">Video</a>
           </li>
+          {{-- membuat tombol Motivation yang mengarah ke halaman motivation --}}
           <li class="nav-item me-4">
             <a class="nav-link" href="/motivation_pencari">Motivation</a>
           </li>
+          {{-- membuat tombol Your Profile yang mengarah ke halaman profile --}}
           <li class="nav-item me-4">
             <a class="nav-link" href="/your_profile">Your Profile</a>
           </li>
+          {{-- membuat tombol Sign Out yang mengarah ke halaman awal website --}}
           <li class="nav-item me-2">
             <button class="btn-sign-out">
               <a href="/">Sign Out</a>
@@ -63,16 +73,22 @@
         </ul>
       </div>
     </div>
+    {{-- Membuat Teks Video agar menarik --}}
     <div class="box-video">
       <h3 class="txt-video">Video</h4>
     </div>
     <br />
+    {{-- Membuat container dan row untuk melihat item video --}}
     <div class="container">
       <div class="row">
+        {{-- Membuat card item video pertama --}}
         <div class="col-4">
           <div class="card">
+            {{-- Memuat gambar video pertama --}}
             <img src="Gambar/img-video-1.png" class="card-img-top" alt="" />
+            {{-- Memuat Card body yang berisi informasi video --}}
             <div class="card-body">
+              {{-- Membuat Teks judul video dan keterangan video --}}
               <h5 class="card-title">Tips Bekerja Dengan Cerdas</h5>
               <p
                 class="card-text"
@@ -83,10 +99,14 @@
             </div>
           </div>
         </div>
+        {{-- Membuat card item video kedua --}}
         <div class="col-4">
           <div class="card">
+            {{-- Memuat gambar video kedua --}}
             <img src="Gambar/img-video-2.png" class="card-img-top" alt="" />
+            {{-- Memuat Card body yang berisi informasi video --}}
             <div class="card-body">
+              {{-- Membuat Teks judul video dan keterangan video --}}
               <h5 class="card-title">
                 Tips Maksimal Bekerja Dari Rumah
               </h5>
@@ -99,10 +119,14 @@
             </div>
           </div>
         </div>
+        {{-- Membuat Teks judul video dan keterangan ketiga --}}
         <div class="col-4">
           <div class="card">
+            {{-- Memuat gambar video ketiga --}}
             <img src="Gambar/img-video-3.png" class="card-img-top" alt="" />
+            {{-- Memuat Card body yang berisi informasi video --}}
             <div class="card-body">
+              {{-- Membuat Teks judul video dan keterangan video --}}
               <h5 class="card-title">Tips Agar Fokus Dalam Bekerja</h5>
               <p
                 class="card-text"
