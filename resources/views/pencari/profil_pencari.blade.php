@@ -64,87 +64,99 @@
     </div>
 
     {{-- Membuat form yang menampung data dari akun user untuk ditampilkan dan dapat di edit sesuai keinginan --}}
-    <div class="container col-lg-6 mx-auto mt-5"> 
+    <div class="container col-lg-7 mx-auto mt-4"> 
       <form action="" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
-          <label class="col-2 col-form-label text-end">Nama</label>
-          <div class="col-8 px-0">
-            <input 
-              type="text" 
-              class="form-control px-3"
-              name="nama" 
-              id="nama"
-              placeholder="Fulan"
-              readonly value="{{ old('nama') }}"
-              style="border-radius: 20px;"
-            />
+          <div class="col-10">
+            {{-- Field Nama --}}
+            <div class="row my-2">
+              <label class="col-3 col-form-label text-end">Nama</label>
+              <div class="col-9 px-0">
+                <input 
+                  type="text" 
+                  class="form-control px-3"
+                  name="nama" 
+                  id="nama"
+                  placeholder="Fulan"
+                  readonly value="{{ old('nama') }}"
+                  style="border-radius: 20px;"
+                />
+              </div>
+            </div>
+            {{-- Field No Telepon --}}
+            <div class="row my-2">
+              <label class="col-3 col-form-label text-end">No Telepon</label>
+              <div class="col-9 px-0">
+                <input 
+                  type="text" 
+                  class="form-control px-3"
+                  name="telepon" 
+                  id="telepon"
+                  placeholder="081210101010"
+                  readonly value="{{ old('telepon') }}"
+                  style="border-radius: 20px;"
+                />
+              </div>
+            </div>
+            {{-- Field Skill --}}
+            <div class="row my-2">
+              <label class="col-3 col-form-label text-end">Skill</label>
+              <div class="col-9 px-0">
+                <input 
+                  type="text" 
+                  class="form-control px-3"
+                  name="skill" 
+                  id="skill"
+                  placeholder="Software Engineer"
+                  readonly value="{{ old('skill') }}"
+                  style="border-radius: 20px;"
+                />
+              </div>
+            </div>
+            {{-- Field Email --}}
+            <div class="row my-2">
+              <label class="col-3 col-form-label text-end">Email</label>
+              <div class="col-9 px-0">
+                <input 
+                  type="email" 
+                  class="form-control px-3"
+                  name="email" 
+                  id="email"
+                  placeholder="fulan@gmail.com"
+                  readonly value="{{ old('email') }}"
+                  style="border-radius: 20px;"
+                />
+              </div>
+            </div>
+            {{-- Field Password --}}
+            <div class="row my-2">
+              <label class="col-3 col-form-label text-end">Password</label>
+              <div class="col-9 px-0">
+                <input 
+                  type="password" 
+                  class="form-control px-3"
+                  name="password" 
+                  id="password"
+                  placeholder="fulan123"
+                  readonly value="{{ old('password') }}"
+                  style="border-radius: 20px;"
+                />
+              </div>
+            </div>
           </div>
-          <div class="col-2 py-1">
+
+          {{-- Button Edit --}}
+          <div class="col-2 py-1 align-self-center">
             <a class="btnEdit" onclick="namaSetReadonly()">
-              <img src="/Gambar/logo-edit-circle.png" alt="" width="46%">
+              <img src="/Gambar/logo-edit-circle.png" alt="" width="50%">
             </a>
           </div>
         </div>
-        <div class="row mb-2">
-          <label class="col-2 col-form-label text-end">No Telepon</label>
-          <div class="col-8 px-0">
-            <input 
-              type="text" 
-              class="form-control px-3"
-              name="telepon" 
-              id="telepon"
-              placeholder="081210101010"
-              readonly value="{{ old('telepon') }}"
-              style="border-radius: 20px;"
-            />
-          </div>
-        </div>
-        <div class="row mb-2">
-          <label class="col-2 col-form-label text-end">Skill</label>
-          <div class="col-8 px-0">
-            <input 
-              type="text" 
-              class="form-control px-3"
-              name="skill" 
-              id="skill"
-              placeholder="Software Engineer"
-              readonly value="{{ old('skill') }}"
-              style="border-radius: 20px;"
-            />
-          </div>
-        </div>
-        <div class="row mb-2">
-          <label class="col-2 col-form-label text-end">Email</label>
-          <div class="col-8 px-0">
-            <input 
-              type="email" 
-              class="form-control px-3"
-              name="email" 
-              id="email"
-              placeholder="fulan@gmail.com"
-              readonly value="{{ old('email') }}"
-              style="border-radius: 20px;"
-            />
-          </div>
-        </div>
-        <div class="row mb-2">
-          <label class="col-2 col-form-label text-end">Password</label>
-          <div class="col-8 px-0">
-            <input 
-              type="password" 
-              class="form-control px-3"
-              name="password" 
-              id="password"
-              placeholder="fulan123"
-              readonly value="{{ old('password') }}"
-              style="border-radius: 20px;"
-            />
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-12 text-center mt-3">
+
+        {{-- Button Simpan --}}
+        <div class="row mt-4">
+          <div class="col-12 text-center">
             <button class="btn btn-simpan" type="submit">Simpan</button>
           </div>
         </div>
