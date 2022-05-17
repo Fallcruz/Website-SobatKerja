@@ -23,7 +23,7 @@
     }
     .txt-video {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      font-weight: 350;
+      font-weight: 500;
       color: white;
       padding-top: 33px;
       padding-left: 50px;
@@ -139,6 +139,45 @@
         </div>
       </div>
     </div>
+
+    <div class="container my-3">
+      <div class="row justify-content-center">
+        <div class="col-6 pb-3">
+          <iframe 
+            src="https://www.youtube.com/embed/C2AU3_p42D0?controls=0"
+            width="100%"
+            height="350px"
+            style="border-radius: 15px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+          ></iframe>
+        </div>
+        <div class="col-6 pb-3">
+          <iframe 
+            src="https://www.youtube.com/embed/yONFaYifCdM?controls=0"
+            width="100%"
+            height="350px"
+            style="border-radius: 15px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"
+          ></iframe>
+        </div>
+        <div class="col-6 pb-3">
+          <iframe 
+            src="https://www.youtube.com/embed/wMawdgZe1wY?controls=0"
+            width="100%"
+            height="350px"
+            style="border-radius: 15px"
+          ></iframe>
+        </div>
+        <div class="col-6 pb-3">
+          <iframe 
+            src="https://www.youtube.com/embed/k_Yg0jvDFr4?controls=0"
+            width="100%"
+            height="350px"
+            style="border-radius: 15px"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
     <br /><br /><br /><br /><br /><br /><br />
   </body>
 </html>
+https://www.youtube.com/watch?v=
