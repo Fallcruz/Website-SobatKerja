@@ -65,7 +65,7 @@
           {{-- Header Contact --}}
           <h3 class="judul-about">CONTACT</h3>
           {{-- Deskripsi Contact --}}
-          <p style="font-family: Work Sans; font-size: 14px; margin-bottom:0;">Jika anda mempunyai keluhan terhadap website kami baik itu kesalahan fitur atau menu ataupun performa website yang kurang baik, anda bisa mengkontak kami lewat list kontak yang tersedia dibawah ini.</p>
+          <p class="desc-about" style="margin-bottom: 0">Jika anda mempunyai keluhan terhadap website kami baik itu kesalahan fitur atau menu ataupun performa website yang kurang baik, anda bisa mengkontak kami lewat list kontak yang tersedia dibawah ini.</p>
 
           {{-- List Contact Yang Bisa Dihubungi --}}
           <ul class="desc-about">

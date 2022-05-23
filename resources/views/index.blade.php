@@ -70,7 +70,7 @@
 
           {{-- Tombol Untuk Menuju Ke Halaman Registrasi Pencari Kerja --}}
           <button type="button" class="btn-about px-3 py-2">
-            <a href="/register_pencari" style="color: white; text-decoration: none;">
+            <a href="/register_pencari" style="color: white; text-decoration: none; font-size: 18px">
               Register
             </a>
           </button>
