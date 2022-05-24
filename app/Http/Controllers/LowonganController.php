@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Lowongan;
+use App\Repositories\LowonganInterface;
 
 class LowonganController extends Controller
 {
+    protected $lowongan;
+    public function __construct(LowonganInterface $lowongan)
+    {
+        $this->lowongan = $lowongan;
+    }
     public function index(){
         return view('pencari.jobs_pencari', [
-            'list' => Lowongan::all()
+            'list' => $this->lowongan->all()
         ]);
     }
 
@@ -38,8 +44,8 @@ class LowonganController extends Controller
                 $file->move($destinationPath,$waktu . $fileName);
                 $validatedData['gambar'] = $waktu . $fileName;
             }
-        
-        Lowongan::create($validatedData);
+
+        $this->lowongan->store($validatedData);
         return redirect('/input_lowongan')->with('success', 'Data berhasil disimpan');;
     }
 }
