@@ -54,6 +54,6 @@ class LowonganController extends Controller
         $validatedData['gambar'] = $this->uploadImage($request);
 
         $this->lowongan->store($validatedData);
-        return redirect('/input_lowongan')->with('success', 'Data berhasil disimpan');;
+        return redirect('/input_lowongan')->with('success', 'Data berhasil disimpan');
     }
 }
