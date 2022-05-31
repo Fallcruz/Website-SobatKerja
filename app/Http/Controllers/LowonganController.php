@@ -35,19 +35,23 @@ class LowonganController extends Controller
         ]);
     }
 
-    public function storeData(Request $request){
-        $validatedData = $this->validateData($request);
-
-        $waktu = "";
-        $validatedData['gambar'] = "";
+    private function uploadImage($request){
         if($file = $request->hasFile('gambar')) {
             $file = $request->file('gambar') ;
             $fileName = $file->getClientOriginalName() ;
             $destinationPath = public_path().'/Gambar/logo';
             $waktu = time();
             $file->move($destinationPath,$waktu . $fileName);
-            $validatedData['gambar'] = $waktu . $fileName;
+            return $waktu . $fileName;
+        }else {
+            return "";
         }
+    }
+
+    public function storeData(Request $request){
+        $validatedData = $this->validateData($request);
+
+        $validatedData['gambar'] = $this->uploadImage($request);
 
         $this->lowongan->store($validatedData);
         return redirect('/input_lowongan')->with('success', 'Data berhasil disimpan');;
