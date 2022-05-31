@@ -6,6 +6,7 @@ use App\Models\Berita;
 use App\Models\Lowongan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LowonganController;
+use App\Http\Controllers\PencariController;
 use App\Http\Controllers\RegisterPencariController;
 use App\Http\Controllers\RegisterPenyediaController;
 use App\Models\Video;
@@ -92,3 +93,5 @@ Route::get('/register-pencari', [RegisterPencariController::class, 'index']);
 Route::post('/login-pencari', [LoginPencariController::class, 'authenticate']);
 Route::get('/login-pencari', [LoginPencariController::class, 'index'])->name('login-pencari');
 Route::post('/signout-pencari', [LoginPencariController::class, 'signout']);
+
+Route::patch('/update_pencari/{pencariKerja}', [PencariController::class, 'update']);

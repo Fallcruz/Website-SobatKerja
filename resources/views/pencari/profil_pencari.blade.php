@@ -63,12 +63,13 @@
     {{-- Membuat profile picture user --}}
     <div class="container mx-auto mt-3 text-center">
       <img src="/Gambar/pic-profile.png" width="200px">
-      <h3 class="mt-3">Fulan</h3>
+      <h3 class="mt-3">{{ auth('pencari')->user()->name }}</h3>
     </div>
 
     {{-- Membuat form yang menampung data dari akun user untuk ditampilkan dan dapat di edit sesuai keinginan --}}
     <div class="container col-lg-7 mx-auto mt-4"> 
-      <form action="" method="POST" enctype="multipart/form-data">
+      <form action="/update_pencari/{{ auth()->user()->id }}" method="POST" enctype="multipart/form-data">
+        @method('patch')
         @csrf
         <div class="row">
           <div class="col-10">
@@ -79,10 +80,10 @@
                 <input 
                   type="text" 
                   class="form-control px-3"
-                  name="nama" 
+                  name="name" 
                   id="nama"
                   placeholder="Fulan"
-                  readonly value="{{ old('nama') }}"
+                  readonly value="{{ auth('pencari')->user()->name }}"
                   style="border-radius: 20px;"
                 />
               </div>
@@ -94,10 +95,10 @@
                 <input 
                   type="text" 
                   class="form-control px-3"
-                  name="telepon" 
+                  name="phone_number" 
                   id="telepon"
                   placeholder="081210101010"
-                  readonly value="{{ old('telepon') }}"
+                  readonly value="{{ auth('pencari')->user()->phone_number }}"
                   style="border-radius: 20px;"
                 />
               </div>
@@ -112,7 +113,7 @@
                   name="skill" 
                   id="skill"
                   placeholder="Software Engineer"
-                  readonly value="{{ old('skill') }}"
+                  readonly value="{{ auth('pencari')->user()->skill }}"
                   style="border-radius: 20px;"
                 />
               </div>
@@ -127,22 +128,7 @@
                   name="email" 
                   id="email"
                   placeholder="fulan@gmail.com"
-                  readonly value="{{ old('email') }}"
-                  style="border-radius: 20px;"
-                />
-              </div>
-            </div>
-            {{-- Field Password --}}
-            <div class="row my-2">
-              <label class="col-3 col-form-label text-end">Password</label>
-              <div class="col-9 px-0">
-                <input 
-                  type="password" 
-                  class="form-control px-3"
-                  name="password" 
-                  id="password"
-                  placeholder="fulan123"
-                  readonly value="{{ old('password') }}"
+                  readonly value="{{ auth('pencari')->user()->email }}"
                   style="border-radius: 20px;"
                 />
               </div>
