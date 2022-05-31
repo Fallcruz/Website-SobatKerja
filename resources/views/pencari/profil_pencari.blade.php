@@ -44,9 +44,12 @@
           </li>
           <li class="nav-item me-2">
             {{-- membuat button sign out untuk keluar dari akun --}}
-            <button class="btn-sign-out">
-              <a href="/">Sign Out</a>
-            </button>
+            <form action="/signout-pencari" method="POST">
+              @csrf
+              <button class="btn-sign-out">
+                Sign Out
+              </button>
+            </form>
           </li>
         </ul>
       </div>

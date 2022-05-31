@@ -49,9 +49,12 @@
           </li>
           {{-- membuat tombol Sign Out yang mengarah ke halaman awal website --}}
           <li class="nav-item me-2">
-            <button class="btn-sign-out">
-              <a href="/">Sign Out</a>
-            </button>
+            <form action="/signout-pencari" method="POST">
+              @csrf
+              <button class="btn-sign-out">
+                Sign Out
+              </button>
+            </form>
           </li>
         </ul>
       </div>
