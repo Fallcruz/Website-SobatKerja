@@ -81,6 +81,8 @@
             <option value="Software Engineer">Software Engineer</option>
             <option value="Machine Learning Engineer">Machine Learning Engineer</option>
             <option value="UI/UX Designer">UI/UX Designer</option>
+            <option value="Backend Developer">Backend Developer</option>
+            <option value="Frontend Developer">Frontend Developer</option>
           </select>
         </div>
         {{-- Pembuatan teks field untuk email address --}}

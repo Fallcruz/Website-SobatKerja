@@ -61,9 +61,15 @@
         <div class="container col-9 mt-4" style="margin-left: 240px;">
           <div class="row">
             {{-- melakukan looping untuk mendapatkan data dari database --}}
+            @php
+              $count = 0
+            @endphp
             @foreach ($listJobs as $lists)
               {{-- melakukan pengkondisian jika nama pekerjaan = Software Engineer maka akan di tampilkan --}}
-              @if ($lists->pekerjaan == "Software Engineer")
+              @if ($lists->pekerjaan == auth('pencari')->user()->skill )
+              @php
+                $count++
+              @endphp
               {{-- membuat card yang berisi data lowongan pekerjaan --}}
               <div class="col-5" style="background-color: rgba(255, 255, 255, 0.902); width: 420px; height: 200px; border-radius: 20px">
                 <div class="row h-100">
@@ -80,6 +86,28 @@
               <div class="col-1" style="width: 20px"></div>
               @endif
             @endforeach
+
+            @if ($count == 0 )
+              @foreach ($listJobs as $lists)
+                {{-- melakukan pengkondisian jika nama pekerjaan = Software Engineer maka akan di tampilkan --}}
+                @if ($lists->pekerjaan == "Software Engineer" )
+                {{-- membuat card yang berisi data lowongan pekerjaan --}}
+                <div class="col-5" style="background-color: rgba(255, 255, 255, 0.902); width: 420px; height: 200px; border-radius: 20px">
+                  <div class="row h-100">
+                    <div class="col-5 text-center my-auto">
+                      <img src="/Gambar/logo/{{ $lists->gambar }}" width="120px">
+                    </div>
+                    <div class="col-7 align-self-center" style="padding-left: 5px;">
+                      <h5><a href="" class="text-decoration-none" style="color: black">{{ $lists->pekerjaan }}</a></h5>
+                      <p class="desc-jobs" style="margin: 0;">Company : <span class="cardField">{{ $lists->nama_perusahaan }}</span></p>
+                      <p class="desc-jobs">Location : <span class="cardField">{{ $lists->lokasi }}</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1" style="width: 20px"></div>
+                @endif
+              @endforeach
+            @endif
           </div>
         </div>
       </div>
