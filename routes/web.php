@@ -19,13 +19,13 @@ use App\Models\Video;
 |
 */
 
-Route::get('/login_pencari', function(){
-    return view('pencari.login_pencari');
-});
+// Route::get('/login_pencari', function(){
+//     return view('pencari.login_pencari');
+// });
 
-Route::get('/register_pencari', function(){
-    return view('pencari.register_pencari');
-});
+// Route::get('/register_pencari', function(){
+//     return view('pencari.register_pencari');
+// });
 
 Route::get('/home_pencari', function(){
     return view('pencari.home_pencari', [
@@ -74,9 +74,6 @@ Route::get('/home_penyedia', function () {
 Route::get('/daftar_pelamar', function () {
     return view('penyedia.daftar_pelamar');
 });
-// Route::get('/input_lowongan', function () {
-//     return view('penyedia.input_lowongan');
-// });
 
 Route::get('/jobs_pencari', [LowonganController::class, 'index']);
 Route::get('/input_lowongan', [LowonganController::class, 'createLowongan']);

@@ -43,7 +43,7 @@
           <li class="nav-item me-3">
             {{-- Tombol Untuk Menuju Halaman Login Pencari Kerja --}}
             <button class="btn-pencari" type="button">
-              <a href="/login_pencari">Pencari</a>
+              <a href="/login-pencari">Pencari</a>
             </button>
           </li>
           <li class="nav-item me-2">
@@ -70,7 +70,7 @@
 
           {{-- Tombol Untuk Menuju Ke Halaman Registrasi Pencari Kerja --}}
           <button type="button" class="btn-about px-3 py-2">
-            <a href="/register_pencari" style="color: white; text-decoration: none; font-size: 18px">
+            <a href="/register-pencari" style="color: white; text-decoration: none; font-size: 18px">
               Register
             </a>
           </button>

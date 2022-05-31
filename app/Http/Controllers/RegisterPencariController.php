@@ -12,6 +12,7 @@ class RegisterPencariController extends Controller
     {
         return view('pencari.register_pencari');
     }
+    
     public function store(Request $request){
         $validatedData = $request->validate([
             'name' => 'required',

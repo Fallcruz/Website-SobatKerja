@@ -23,8 +23,8 @@ class LowonganController extends Controller
         return view('penyedia.input_lowongan');
     }
 
-    public function storeData(Request $request){
-        $validatedData = $request->validate([
+    private function validateData(Request $request){
+        return $request->validate([
             'pekerjaan' => 'required|max:255',
             'nama_perusahaan' => 'required|max:255',
             'lokasi' => 'required|max:255',
@@ -33,17 +33,21 @@ class LowonganController extends Controller
             'gaji' => 'required',
             'persyaratan' => 'required',
         ]);
+    }
+
+    public function storeData(Request $request){
+        $validatedData = $this->validateData($request);
 
         $waktu = "";
-            $validatedData['gambar'] = "";
-            if($file = $request->hasFile('gambar')) {
-                $file = $request->file('gambar') ;
-                $fileName = $file->getClientOriginalName() ;
-                $destinationPath = public_path().'/Gambar/logo';
-                $waktu = time();
-                $file->move($destinationPath,$waktu . $fileName);
-                $validatedData['gambar'] = $waktu . $fileName;
-            }
+        $validatedData['gambar'] = "";
+        if($file = $request->hasFile('gambar')) {
+            $file = $request->file('gambar') ;
+            $fileName = $file->getClientOriginalName() ;
+            $destinationPath = public_path().'/Gambar/logo';
+            $waktu = time();
+            $file->move($destinationPath,$waktu . $fileName);
+            $validatedData['gambar'] = $waktu . $fileName;
+        }
 
         $this->lowongan->store($validatedData);
         return redirect('/input_lowongan')->with('success', 'Data berhasil disimpan');;

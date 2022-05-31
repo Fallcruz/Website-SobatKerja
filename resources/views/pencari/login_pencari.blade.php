@@ -74,7 +74,7 @@
         <div style="margin-top: 12px;">
           <span
             >Doesn't have an account ?
-            <a href="/register_pencari">Register now!</a></span
+            <a href="/register-pencari">Register now!</a></span
           >
         </div>
       </form>
