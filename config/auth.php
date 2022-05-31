@@ -44,6 +44,10 @@ return [
             'driver' => 'session',
             'provider' => 'pencari_kerjas',
         ],
+        'penyedia' => [
+            'driver' => 'session',
+            'provider' => 'penyedia_kerjas',
+        ],
     ],
 
     /*
@@ -71,6 +75,10 @@ return [
         'pencari_kerjas' => [
             'driver' => 'eloquent',
             'model' => App\Models\PencariKerja::class,
+        ],
+        'penyedia_kerjas' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\PenyediaKerja::class,
         ],
 
         // 'users' => [

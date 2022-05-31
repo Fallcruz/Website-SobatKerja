@@ -30,6 +30,10 @@ class Authenticate extends Middleware
                 return route('login-pencari');
             }
 
+            if (Arr::first($this->guards) === 'penyedia') {
+                return route('login_penyedia');
+            }
+
             return route('login');
         }
     }

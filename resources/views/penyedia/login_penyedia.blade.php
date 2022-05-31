@@ -42,7 +42,8 @@
   </head>
   <body class="text-center">
     <main class="form-signin">
-      <form>
+      <form action="/login_penyedia" method="POST">
+        @csrf
         <span class="sobat">Sobat</span><span class="kerja">Kerja</span>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
@@ -52,6 +53,7 @@
             class="form-control"
             id="floatingInput"
             placeholder="name@example.com"
+            name="email"
           />
           <label for="floatingInput">Email address</label>
         </div>
@@ -61,12 +63,13 @@
             class="form-control"
             id="floatingPassword"
             placeholder="Password"
+            name="password"
           />
           <label for="floatingPassword">Password</label>
         </div>
-        <a href="/home_penyedia" class="w-100 btn btn-lg btn-primary">
+        <button class="w-100 btn btn-lg btn-primary">
           Sign in
-        </a>
+        </button>
         <div style="margin-top: 12px;">
           <span
             >Belum punya akun ?

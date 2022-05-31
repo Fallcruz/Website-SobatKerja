@@ -31,9 +31,12 @@
             <a class="nav-link" href="/daftar_pelamar">Daftar Pelamar</a>
           </li>
           <li class="nav-item me-2">
-            <button class="btn-sign-out">
-              <a href="/">Sign Out</a>
-            </button>
+            <form action="/signout_penyedia" method="POST">
+              @csrf
+              <button class="btn-sign-out">
+                Sign Out
+              </button>
+            </form>
           </li>
         </ul>
       </div>

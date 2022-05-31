@@ -52,7 +52,8 @@
   <body class="text-center">
     <main class="form-signin">
       {{-- Untuk membuat Form Registrasi Penyedia Kerja --}}
-      <form>
+      <form action="/register_penyedia" method="POST">
+        @csrf
         <span class="sobat">Sobat</span><span class="kerja">Kerja</span>
         {{-- Header Form Registrasi --}}
         <h1 class="h3 mb-3 fw-normal">Please Register</h1>
@@ -64,6 +65,7 @@
             class="form-control"
             id="floatingInput"
             placeholder="example123"
+            name="company_name"
           />
           <label for="floatingInput">Nama Perusahaan</label>
         </div>
@@ -75,6 +77,7 @@
             class="form-control"
             id="floatingInput"
             placeholder="example123"
+            name="location"
           />
           <label for="floatingInput">Lokasi Perusahaan</label>
         </div>
@@ -86,6 +89,7 @@
             class="form-control"
             id="floatingInput"
             placeholder="name@example.com"
+            name="email"
           />
           <label for="floatingInput">Email Perusahaan</label>
         </div>
@@ -97,14 +101,15 @@
             class="form-control"
             id="floatingPassword"
             placeholder="Password"
+            name="password"
           />
           <label for="floatingPassword">Password</label>
         </div>
 
         {{-- Tombol Submit Form Registrasi --}}
-        <a href="/home_penyedia" class="w-100 btn btn-lg btn-primary">
+        <button class="w-100 btn btn-lg btn-primary">
           Register
-        </a>
+        </button>
 
         {{-- Tombol Untuk Menuju Halaman Login --}}
         <div style="margin-top: 12px;">
