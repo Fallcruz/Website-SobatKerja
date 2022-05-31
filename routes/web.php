@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\LoginPencariController;
 use App\Models\Berita;
 use App\Models\Lowongan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LowonganController;
+use App\Http\Controllers\RegisterPencariController;
 use App\Models\Video;
 
 /*
@@ -30,7 +32,7 @@ Route::get('/home_pencari', function(){
         'listJobs' => Lowongan::all(),
         'listNews' => Berita::all()
     ]);
-});
+})->middleware('auth:pencari');
 
 Route::get('/motivation_pencari', function(){
     return view('pencari.motivation_pencari');
@@ -79,3 +81,10 @@ Route::get('/daftar_pelamar', function () {
 Route::get('/jobs_pencari', [LowonganController::class, 'index']);
 Route::get('/input_lowongan', [LowonganController::class, 'createLowongan']);
 Route::post('/input_lowongan', [LowonganController::class, 'storeData']);
+
+Route::post('/register-pencari', [RegisterPencariController::class, 'store']);
+Route::get('/register-pencari', [RegisterPencariController::class, 'index']);
+
+Route::post('/login-pencari', [LoginPencariController::class, 'authenticate']);
+Route::get('/login-pencari', [LoginPencariController::class, 'index'])->name('login-pencari');
+Route::post('/signout-pencari', [LoginPencariController::class, 'signout']);

@@ -44,7 +44,8 @@
 
     {{-- Membuat form yang menampung data akun user untuk melakukan sign in kedalam website SobatKerja --}}
     <main class="form-signin">
-      <form>
+      <form action="/login-pencari" method="POST">
+        @csrf
         <span class="sobat">Sobat</span><span class="kerja">Kerja</span>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
         <div class="form-floating">
@@ -53,6 +54,7 @@
             class="form-control"
             id="floatingInput"
             placeholder="name@example.com"
+            name="email"
           />
           <label for="floatingInput">Email address</label>
         </div>
@@ -62,12 +64,13 @@
             class="form-control"
             id="floatingPassword"
             placeholder="Password"
+            name="password"
           />
           <label for="floatingPassword">Password</label>
         </div>
-        <a href="/home_pencari" class="w-100 btn btn-lg btn-primary">
+        <button class="w-100 btn btn-lg btn-primary">
           Sign in
-        </a>
+        </button>
         <div style="margin-top: 12px;">
           <span
             >Doesn't have an account ?

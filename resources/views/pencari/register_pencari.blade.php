@@ -43,7 +43,8 @@
   {{-- Membuat form register untuk pengisian data pencari --}}
   <body class="text-center">
     <main class="form-signin">
-      <form>
+      <form action="/register-pencari" method="POST">
+        @csrf
         {{-- Menampilkan teks sobat kerja dan please register --}}
         <span class="sobat">Sobat</span><span class="kerja">Kerja</span>
         <h1 class="h3 mb-3 fw-normal">Please Register</h1>
@@ -55,6 +56,7 @@
             class="form-control"
             id="floatingInput"
             placeholder="example123"
+            name="name"
           />
           <label for="floatingInput">Full Name</label>
         </div>
@@ -65,6 +67,7 @@
             class="form-control"
             id="floatingInput"
             placeholder="example123"
+            name="phone_number"
           />
           <label for="floatingInput">Phone Number</label>
         </div>
@@ -73,11 +76,11 @@
           <label class="input-group-text" for="inputGroupSelect01"
             >Skills</label
           >
-          <select class="form-select" id="inputGroupSelect01">
+          <select class="form-select" id="inputGroupSelect01" name="skill">
             <option selected>Choose...</option>
-            <option value="1">Software Engineer</option>
-            <option value="2">Machine Learning Engineer</option>
-            <option value="3">UI/UX Designer</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+            <option value="UI/UX Designer">UI/UX Designer</option>
           </select>
         </div>
         {{-- Pembuatan teks field untuk email address --}}
@@ -87,6 +90,7 @@
             class="form-control"
             id="floatingInput"
             placeholder="name@example.com"
+            name="email"
           />
           <label for="floatingInput">Email address</label>
         </div>
@@ -97,18 +101,19 @@
             class="form-control"
             id="floatingPassword"
             placeholder="Password"
+            name="password"
           />
           <label for="floatingPassword">Password</label>
         </div>
         {{-- Membuat tombol register yang jika di klik akan mengarahkan ke halaman home_pencari --}}
-        <a href="/home_pencari" class="w-100 btn btn-lg btn-primary">
+        <button class="w-100 btn btn-lg btn-primary">
           Register
-        </a>
+        </button>
         {{-- Membuat teks already have account ? dan Login now yang akan mengarahkan ke halaman login_pencari --}}
         <div style="margin-top: 12px;">
           <span
             >Already have account ?
-            <a href="/login_pencari">Login now!</a></span
+            <a href="/login-pencari">Login now!</a></span
           >
         </div>
       </form>
