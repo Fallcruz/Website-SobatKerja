@@ -32,6 +32,7 @@ class LowonganController extends Controller
             'kualifikasi' => 'required|max:255',
             'gaji' => 'required',
             'persyaratan' => 'required',
+            'gambar' => 'required'
         ]);
     }
 
