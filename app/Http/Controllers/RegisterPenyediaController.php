@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Lowongan;
+use App\Models\PencariKerja;
 use App\Models\PenyediaKerja;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -24,6 +26,25 @@ class RegisterPenyediaController extends Controller
         $validatedData['password'] = Hash::make($validatedData['password']);
 
         PenyediaKerja::create($validatedData);
+        
         return redirect('/login_penyedia');
+    }
+
+    public function testLowongan(){
+        return response()->json([
+            'lowongans' => PenyediaKerja::where('id', '=', auth('penyedia')->user()->id)->first()->lowongans,
+        ]);
+    }
+
+    public function lowonganYangDiDaftar(){
+        return response()->json([
+            'lowongans' => PencariKerja::where('id', '=', auth('pencari')->user()->id)->first()->lowongans,
+        ]);
+    }
+
+    public function pencariYangMendaftarLowongan(){
+        return response()->json([
+            'pencari_kerjas' => Lowongan::where('id', '=', 1)->first()->pencariKerjas,
+        ]);
     }
 }

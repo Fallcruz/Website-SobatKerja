@@ -89,3 +89,10 @@ Route::get('/login-pencari', [LoginPencariController::class, 'index'])->name('lo
 Route::post('/signout-pencari', [LoginPencariController::class, 'signout']);
 
 Route::patch('/update_pencari/{pencariKerja}', [PencariController::class, 'update']);
+
+
+
+
+Route::get('/test-lowongan', [RegisterPenyediaController::class, 'testLowongan']);
+Route::get('/lowongan-yang-didaftar', [RegisterPenyediaController::class, 'lowonganYangDiDaftar']);
+Route::get('/pencari-yang-mendaftar-lowongan', [RegisterPenyediaController::class, 'pencariYangMendaftarLowongan']);
