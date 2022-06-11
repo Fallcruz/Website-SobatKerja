@@ -13,8 +13,11 @@ class CreateLowongansTable extends Migration
      */
     public function up()
     {
+        // karena tabel lowongans references ke tabel penyedia_kerjas => maka migration tabel penyedia_kerjas harus ada diatas tabel lowongans => cara nya adalah ganti tanggal pada nama migration tabel penyedia_kerjas => buat tanggal lebih awal dari tanggal migration lowongan
         Schema::create('lowongans', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('penyedia_kerja_id');
+            $table->foreign('penyedia_kerja_id')->references('id')->on('penyedia_kerjas');
             $table->string('pekerjaan');
             $table->string('nama_perusahaan');
             $table->string('lokasi');

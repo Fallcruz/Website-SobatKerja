@@ -2,10 +2,14 @@
 
 namespace Database\Seeders;
 
-use App\Models\Lowongan;
-use App\Models\Berita;
 use App\Models\Video;
+use App\Models\Berita;
+use App\Models\Lowongan;
+use App\Models\PencariKerja;
+use App\Models\PenyediaKerja;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,7 +21,39 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        Lowongan::create([
+        $penyedia1 = PenyediaKerja::create([
+            'company_name' => 'Golek',
+            'email' => 'golek@gmail.com',
+            'password' => Hash::make('password'),
+            'location' => 'Jakarta Selatan',
+        ]);
+
+        $penyedia2 = PenyediaKerja::create([
+            'company_name' => 'TokoToki',
+            'email' => 'tokotoki@gmail.com',
+            'password' => Hash::make('password'),
+            'location' => 'Jakarta Barat',
+        ]);
+
+        $pencari1 = PencariKerja::create([
+            'name' => 'Kadek Rizky Fransisca Putra',
+            'email' => 'rizky.royal@gmail.com',
+            'password' => Hash::make('password'),
+            'skill' => 'Software Engineer',
+            'phone_number' => '081938713808'
+        ]);
+
+        $pencari2 = PencariKerja::create([
+            'name' => 'Rafly Rhamadhan',
+            'email' => 'rafly@gmail.com',
+            'password' => Hash::make('password'),
+            'skill' => 'Software Engineer',
+            'phone_number' => '081938713808'
+        ]);
+
+        
+
+        $lowongan1 = Lowongan::create([
             'pekerjaan' => 'Web Developer',
             'nama_perusahaan' => 'Modernland Indonesia',
             'lokasi' => 'Jakarta',
@@ -26,8 +62,9 @@ class DatabaseSeeder extends Seeder
             'gaji' => 7000000,
             'persyaratan' => 'Menguasai bidang Web Developer',
             'gambar' => '1652448333modernland.png',
+            'penyedia_kerja_id' =>  $penyedia1->id
         ]);
-        Lowongan::create([
+        $lowongan2 = Lowongan::create([
             'pekerjaan' => 'Software Engineer',
             'nama_perusahaan' => 'Gojek',
             'lokasi' => 'Jakarta',
@@ -36,8 +73,9 @@ class DatabaseSeeder extends Seeder
             'gaji' => 4000000,
             'persyaratan' => 'Menguasai bidang Software Engineer',
             'gambar' => '1652448333logo-gojek.png',
+            'penyedia_kerja_id' =>  $penyedia1->id
         ]);
-        Lowongan::create([
+        $lowongan3 = Lowongan::create([
             'pekerjaan' => 'Software Engineer',
             'nama_perusahaan' => 'Tokopedia',
             'lokasi' => 'Jakarta',
@@ -46,8 +84,9 @@ class DatabaseSeeder extends Seeder
             'gaji' => 4000000,
             'persyaratan' => 'Menguasai bidang Software Engineer',
             'gambar' => '1652448333logo-tokopedia.png',
+            'penyedia_kerja_id' =>  $penyedia1->id
         ]);
-        Lowongan::create([
+        $lowongan4 = Lowongan::create([
             'pekerjaan' => 'Backend Developer',
             'nama_perusahaan' => 'Gojek',
             'lokasi' => 'Jakarta',
@@ -56,8 +95,9 @@ class DatabaseSeeder extends Seeder
             'gaji' => 3000000,
             'persyaratan' => 'Menguasai bidang Backend Developer',
             'gambar' => '1652448333logo-gojek.png',
+            'penyedia_kerja_id' =>  $penyedia2->id
         ]);
-        Lowongan::create([
+        $lowongan5 = Lowongan::create([
             'pekerjaan' => 'Frontend Developer',
             'nama_perusahaan' => 'Astra Internasional',
             'lokasi' => 'Jakarta',
@@ -66,6 +106,28 @@ class DatabaseSeeder extends Seeder
             'gaji' => 7000000,
             'persyaratan' => 'Menguasai bidang Frontend Developer',
             'gambar' => '1652448333astra.png',
+            'penyedia_kerja_id' =>  $penyedia2->id
+        ]);
+
+        DB::table('apply_lowongan')->insert([
+            'pencari_kerja_id' => $pencari1->id,
+            'lowongan_id' => $lowongan1->id
+        ]);
+        DB::table('apply_lowongan')->insert([
+            'pencari_kerja_id' => $pencari1->id,
+            'lowongan_id' => $lowongan2->id
+        ]);
+        DB::table('apply_lowongan')->insert([
+            'pencari_kerja_id' => $pencari1->id,
+            'lowongan_id' => $lowongan3->id
+        ]);
+        DB::table('apply_lowongan')->insert([
+            'pencari_kerja_id' => $pencari2->id,
+            'lowongan_id' => $lowongan4->id
+        ]);
+        DB::table('apply_lowongan')->insert([
+            'pencari_kerja_id' => $pencari2->id,
+            'lowongan_id' => $lowongan5->id
         ]);
         Berita::create([
             'judul' => '5 Advantages of Working in a Small Company, More Achievements!',
