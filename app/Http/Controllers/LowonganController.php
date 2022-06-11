@@ -57,4 +57,8 @@ class LowonganController extends Controller
         $this->lowongan->store($validatedData);
         return redirect('/input_lowongan')->with('success', 'Data berhasil disimpan');
     }
+
+    public function show(Lowongan $job){
+        return view('pencari.detail_jobs_pencari', ['job' => $job]);
+    }
 }

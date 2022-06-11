@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SobatKerja - Jobs</title>
-    <link rel="stylesheet" href="/css/jobs_pencari.css" />
+    <link rel="stylesheet" href="/css/detail_jobs_pencari.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -53,38 +53,23 @@
       </div>
     </div>
 
-    {{-- Membuat section untuk pencarian lowongan pekerjaan --}}
-    <div class="box-pencarian" style="background-image: url(/Gambar/6.png);">
-      <h3 class="txt-pencarian">Pencarian Lowongan</h4>
-      <div class="d-flex p-1">
-        <input type="search" class="jobs-pencarian my-3" placeholder="Bidang Pekerjaan" style="margin-left: 210px;">
-        <input type="search" class="jobs-pencarian my-3 mx-2" placeholder="Kota, Provinsi, Negara">
-        <button type="submit" class="jobs-btn">Find Jobs</button>
+    <div class="box-gambar" style="background-image: url(/Gambar/6.png);"></div>
+
+    <div class="col-9 mx-auto my-4">
+      <div class="d-flex justify-content-center">
+        <img class="img-jobs" src="/Gambar/logo/{{ $job->gambar }}" alt="logo perusahaan">
+      </div>
+      <div class="my-5">
+        <p class="desc-jobs">Nama Perusahaan : <b>{{ $job->nama_perusahaan }}</b></p>
+        <p class="desc-jobs">Posisi : <b>{{ $job->pekerjaan }}</b></p>
+        <p class="desc-jobs">Lokasi : <b>{{ $job->lokasi }}</b></p>
+        <p class="desc-jobs">Minimal Pengalaman : <b>{{ $job->pengalaman }}</b></p>
+        <p class="desc-jobs">Kualifikasi : <b>{{ $job->kualifikasi }}</b></p>
+        <p class="desc-jobs">Estimasi Gaji : <b>{{ $job->gaji }}</b></p>
+        <p class="desc-jobs">Persyaratan : <b>{{ $job->persyaratan }}</b></p>
       </div>
     </div>
 
-    {{-- Membuat section untuk daftar lowongan pekerjaan --}}
-    <h4 class="my-4" style="font-weight:400; padding-left: 50px;">Lowongan Pekerjaan :</h4>
-    <div class="container">
-      <div class="row">
-        {{-- melakukan looping untuk mendapatkan data dari database --}}
-        @foreach ($list as $lowongan)
-          <div class="col-5 mb-4">
-            <div class="d-flex job-field p-3">
-              <img class="img-jobs" src="Gambar/logo/{{ $lowongan->gambar }}" alt="logo perusahaan">
-              <div class="align-self-center py-2" style="margin-left: 35px;">
-                  <h5>{{ $lowongan->pekerjaan }}</h5>
-                  <p class="desc-jobs" style="margin: 0;">Company : {{ $lowongan->nama_perusahaan }}</p>
-                  <p class="desc-jobs">Location : {{ $lowongan->lokasi }}</p>
-                  <a class="btn btn-view" href="/jobs_pencari/{{ $lowongan->id }}">View</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-1" style="width: 30px"></div>
-        @endforeach
-      </div>
-    </div>
-    
     <br /><br /><br />
   </body>
 </html>
