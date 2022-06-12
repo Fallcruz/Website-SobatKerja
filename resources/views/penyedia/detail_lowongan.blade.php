@@ -46,7 +46,7 @@
       </div>
 
     <div class="box-gambar" style="background-image: url(/Gambar/6.png);">
-      <h3 class="txt-lowongan">Lowongan Pekerjaan</h4>
+      <h3 class="txt-lowongan">Daftar Lowongan</h4>
     </div>
 
     <div class="col-10 container mx-auto my-4">

@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/home_pencari.css" />
+    <link rel="stylesheet" href="/css/profil_penyedia.css" />
 
     <!-- Bootstrap core CSS -->
     <link
@@ -46,7 +47,7 @@
     <!-- Custom styles for this template -->
     <link href="/css/signin.css" rel="stylesheet" />
   </head>
-  <body class="text-center">
+  <body>
     <!--Navbar Atas-->
     <div class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid px-4">
@@ -77,7 +78,10 @@
         </ul>
       </div>
     </div>
-    <main class="form-signin">
+    <div class="box-profile" style="background-image: url(/Gambar/6.png);">
+      <h3 class="txt-profile">Input Lowongan</h4>
+    </div>
+    <main class="form-signin text-center">
       <form action="/input_lowongan" method="POST" enctype="multipart/form-data">
         @csrf
         <span class="sobat">Sobat</span><span class="kerja">Kerja</span>

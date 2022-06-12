@@ -85,7 +85,6 @@
                   class="form-control px-3"
                   name="name" 
                   id="nama"
-                  placeholder="Fulan"
                   readonly value="{{ auth('pencari')->user()->name }}"
                   style="border-radius: 20px;"
                 />
@@ -100,7 +99,6 @@
                   class="form-control px-3"
                   name="phone_number" 
                   id="telepon"
-                  placeholder="081210101010"
                   readonly value="{{ auth('pencari')->user()->phone_number }}"
                   style="border-radius: 20px;"
                 />
@@ -115,7 +113,6 @@
                   class="form-control px-3"
                   name="skill" 
                   id="skill"
-                  placeholder="Software Engineer"
                   readonly value="{{ auth('pencari')->user()->skill }}"
                   style="border-radius: 20px;"
                 />
@@ -130,7 +127,6 @@
                   class="form-control px-3"
                   name="email" 
                   id="email"
-                  placeholder="fulan@gmail.com"
                   readonly value="{{ auth('pencari')->user()->email }}"
                   style="border-radius: 20px;"
                 />
@@ -155,26 +151,25 @@
       </form>
     </div>
     <br><br><br>
-  </body>
-  <script>
-    var click = 0
-    function namaSetReadonly() {
-      if (click % 2 == 0){
-        document.getElementById("nama").readOnly = false;
-        document.getElementById("telepon").readOnly = false;
-        document.getElementById("skill").readOnly = false;
-        document.getElementById("email").readOnly = false;
-        document.getElementById("password").readOnly = false;
-        click += 1;
+    <script>
+      var click = 0;
+      function namaSetReadonly() {
+        if (click % 2 == 0){
+          document.getElementById("nama").readOnly = false;
+          document.getElementById("telepon").readOnly = false;
+          document.getElementById("skill").readOnly = false;
+          document.getElementById("email").readOnly = false;
+          click += 1;
+        }
+        else if (click % 2 == 1) {
+          document.getElementById("nama").readOnly = true;
+          document.getElementById("telepon").readOnly = true;
+          document.getElementById("skill").readOnly = true;
+          document.getElementById("email").readOnly = true;
+          click += 1;
+        }
       }
-      else {
-        document.getElementById("nama").readOnly = true;
-        document.getElementById("telepon").readOnly = true;
-        document.getElementById("skill").readOnly = true;
-        document.getElementById("email").readOnly = true;
-        document.getElementById("password").readOnly = true;
-        click += 1;
-      }
-    }
     </script>
+  </body>
+  
 </html>

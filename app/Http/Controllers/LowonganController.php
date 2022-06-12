@@ -60,6 +60,6 @@ class LowonganController extends Controller
     }
 
     public function show(Lowongan $job){
-        return view('penyedia.detail_lowongan', ['job' => $job]);
+        return view('pencari.detail_jobs_pencari', ['job' => $job]);
     }
 }
