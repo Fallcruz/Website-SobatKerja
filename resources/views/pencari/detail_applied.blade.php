@@ -27,10 +27,10 @@
             <a class="nav-link" href="/home_pencari">Home</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link active" href="/jobs_pencari">Jobs</a>
+            <a class="nav-link" href="/jobs_pencari">Jobs</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="/pencari/list-lowongan">Applied</a>
+            <a class="nav-link active" href="/pencari/list-lowongan">Applied</a>
           </li>
           <li class="nav-item me-4">
             <a class="nav-link" href="/news_pencari">News</a>
@@ -57,11 +57,11 @@
     </div>
 
     <div class="box-gambar" style="background-image: url(/Gambar/6.png);">
-      <h3 class="txt-lowongan">Lowongan Pekerjaan</h4>
+      <h3 class="txt-lowongan">Applied Lowongan</h4>
     </div>
 
     <div class="col-10 container mx-auto my-4">
-      <a href="/jobs_pencari">
+      <a href="/pencari/list-lowongan">
         <img src="/Gambar/arrow-right.png" alt="" width="20px" height="20px" style="transform: rotate(180deg)">
       </a>
       <div class="d-flex justify-content-center">
@@ -75,12 +75,6 @@
         <p class="desc-jobs">Kualifikasi : <b>{{ $job->kualifikasi }}</b></p>
         <p class="desc-jobs">Estimasi Gaji : <b>{{ $job->gaji }}</b></p>
         <p class="desc-jobs">Persyaratan : <b>{{ $job->persyaratan }}</b></p>
-        <div style="height: 20px"></div>
-        <form action="/pencari/apply-lowongan" method="POST">
-          @csrf
-          <input type="hidden" value="{{ $job->id }}" name="id">
-          <button class="btn btn-view" href="">Lamar Sekarang</button>
-        </form>
       </div>
     </div>
 

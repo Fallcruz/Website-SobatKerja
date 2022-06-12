@@ -96,6 +96,7 @@ Route::patch('/update_pencari/{pencariKerja}', [PencariController::class, 'updat
 Route::get('/penyedia/list-lowongan', [PenyediaController::class, 'listLowongan']);
 
 Route::get('/pencari/list-lowongan', [PencariController::class, 'listLowongan']);
+Route::get('/pencari/list-lowongan/{job:id}', [PencariController::class, 'show']);
 
 Route::post('/pencari/apply-lowongan', [PencariController::class, 'applyLowongan']);
 

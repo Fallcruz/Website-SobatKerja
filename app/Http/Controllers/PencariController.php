@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PencariKerja;
+use App\Models\Lowongan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -22,7 +23,7 @@ class PencariController extends Controller
     }
 
     public function listLowongan(){
-        return response()->json([
+        return view('pencari.applied', [
             'lowongans' => PencariKerja::where('id', '=', auth('pencari')->user()->id)->first()->lowongans,
         ]);
     }
@@ -33,5 +34,9 @@ class PencariController extends Controller
             'lowongan_id' => $request->id
         ]);
         return redirect('/pencari/list-lowongan');
+    }
+
+    public function show(Lowongan $job){
+        return view('pencari.detail_applied', ['job' => $job]);
     }
 }

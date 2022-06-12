@@ -31,6 +31,10 @@
           <li class="nav-item me-4">
             <a class="nav-link" href="/jobs_pencari">Jobs</a>
           </li>
+          {{--  --}}
+          <li class="nav-item me-4">
+            <a class="nav-link" href="/pencari/list-lowongan">Applied</a>
+          </li>
           {{-- membuat tombol News yang mengarah ke halaman news --}}
           <li class="nav-item me-4">
             <a class="nav-link" href="/news_pencari">News</a>
