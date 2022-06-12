@@ -30,18 +30,6 @@ class RegisterPenyediaController extends Controller
         return redirect('/login_penyedia');
     }
 
-    public function testLowongan(){
-        return response()->json([
-            'lowongans' => PenyediaKerja::where('id', '=', auth('penyedia')->user()->id)->first()->lowongans,
-        ]);
-    }
-
-    public function lowonganYangDiDaftar(){
-        return response()->json([
-            'lowongans' => PencariKerja::where('id', '=', auth('pencari')->user()->id)->first()->lowongans,
-        ]);
-    }
-
     public function pencariYangMendaftarLowongan(){
         return response()->json([
             'pencari_kerjas' => Lowongan::where('id', '=', 1)->first()->pencariKerjas,

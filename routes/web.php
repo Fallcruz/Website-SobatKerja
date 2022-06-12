@@ -8,8 +8,10 @@ use App\Models\Lowongan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LowonganController;
 use App\Http\Controllers\PencariController;
+use App\Http\Controllers\PenyediaController;
 use App\Http\Controllers\RegisterPencariController;
 use App\Http\Controllers\RegisterPenyediaController;
+use App\Models\PencariKerja;
 use App\Models\Video;
 
 /*
@@ -91,6 +93,11 @@ Route::patch('/update_pencari/{pencariKerja}', [PencariController::class, 'updat
 
 
 
-Route::get('/test-lowongan', [RegisterPenyediaController::class, 'testLowongan']);
-Route::get('/lowongan-yang-didaftar', [RegisterPenyediaController::class, 'lowonganYangDiDaftar']);
+Route::get('/penyedia/list-lowongan', [PenyediaController::class, 'listLowongan']);
+
+Route::get('/pencari/list-lowongan', [PencariController::class, 'listLowongan']);
+
+Route::post('/pencari/apply-lowongan', [PencariController::class, 'applyLowongan']);
+
+
 Route::get('/pencari-yang-mendaftar-lowongan', [RegisterPenyediaController::class, 'pencariYangMendaftarLowongan']);
