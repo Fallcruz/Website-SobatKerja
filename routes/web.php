@@ -62,22 +62,28 @@ Route::get('/contact', function () {
 Route::get('/login_penyedia', function () {
     return view('penyedia.login_penyedia');
 })->name('login_penyedia');
+
 Route::post('/login_penyedia', [LoginPenyediaController::class, 'authenticate']);
+
 Route::get('/register_penyedia', function () {
     return view('penyedia.register_penyedia');
 });
+
 Route::post('/register_penyedia', [RegisterPenyediaController::class, 'store']);
+
 Route::post('/signout_penyedia', [LoginPenyediaController::class, 'signout']);
 
 Route::get('/home_penyedia', function () {
     return view('penyedia.home_penyedia');
 })->middleware('auth:penyedia');
+
 Route::get('/daftar_pelamar', function () {
     return view('penyedia.daftar_pelamar');
 })->middleware('auth:penyedia');
 
 Route::get('/jobs_pencari', [LowonganController::class, 'index'])->middleware('auth:pencari');
 Route::get('/jobs_pencari/{job:id}', [LowonganController::class, 'show'])->middleware('auth:pencari');
+
 Route::get('/input_lowongan', [LowonganController::class, 'createLowongan'])->middleware('auth:penyedia');
 Route::post('/input_lowongan', [LowonganController::class, 'storeData'])->middleware('auth:penyedia');
 
@@ -86,12 +92,10 @@ Route::get('/register-pencari', [RegisterPencariController::class, 'index']);
 
 Route::post('/login-pencari', [LoginPencariController::class, 'authenticate']);
 Route::get('/login-pencari', [LoginPencariController::class, 'index'])->name('login-pencari');
+
 Route::post('/signout-pencari', [LoginPencariController::class, 'signout']);
 
 Route::patch('/update_pencari/{pencariKerja}', [PencariController::class, 'update']);
-
-
-
 
 Route::get('/penyedia/list-lowongan', [PenyediaController::class, 'listLowongan']);
 Route::get('/penyedia/list-lowongan/{job:id}', [PenyediaController::class, 'show']);
@@ -100,6 +104,5 @@ Route::get('/pencari/list-lowongan', [PencariController::class, 'listLowongan'])
 Route::get('/pencari/list-lowongan/{job:id}', [PencariController::class, 'show']);
 
 Route::post('/pencari/apply-lowongan', [PencariController::class, 'applyLowongan']);
-
 
 Route::get('/pencari-yang-mendaftar-lowongan', [RegisterPenyediaController::class, 'pencariYangMendaftarLowongan']);

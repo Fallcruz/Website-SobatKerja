@@ -60,15 +60,15 @@
     <div class="box-pencarian" style="background-image: url(/Gambar/6.png);">
       <h3 class="txt-pencarian">Pencarian Lowongan</h4>
       <div class="d-flex p-1">
-        <input type="search" class="jobs-pencarian my-3" placeholder="Bidang Pekerjaan" style="margin-left: 210px;">
-        <input type="search" class="jobs-pencarian my-3 mx-2" placeholder="Kota, Provinsi, Negara">
-        <button type="submit" class="jobs-btn">Find Jobs</button>
+        <input type="text" class="jobs-pencarian my-3" placeholder="Bidang Pekerjaan" name="position" id="position" style="margin-left: 210px;">
+        <input type="search" class="jobs-pencarian my-3 mx-2" placeholder="Kota, Provinsi, Negara" name="location" id="location">
+        <button class="jobs-btn" onclick="searchJob()">Find Jobs</button>
       </div>
     </div>
 
     {{-- Membuat section untuk daftar lowongan pekerjaan --}}
     <h4 class="my-4" style="font-weight:400; padding-left: 50px;">Lowongan Pekerjaan :</h4>
-    <div class="container">
+    <div class="container" id="listJob">
       <div class="row">
         {{-- melakukan looping untuk mendapatkan data dari database --}}
         @foreach ($list as $lowongan)
@@ -87,7 +87,38 @@
         @endforeach
       </div>
     </div>
-    
-    <br /><br /><br />
+
+    {{-- Search Result --}}
+    <div class="container" id="resultJob"></div>
+
+    <br><br><br><br><br>
+
+    <script>
+      function searchJob(){
+        document.getElementById("listJob").style.display = "none";
+        document.getElementById("resultJob").style.display = "block";
+        var posisi = document.getElementById("position").value;
+        var resultJob = document.getElementById('resultJob');
+        var item = `<div class="row">
+                      @foreach ($list as $lowongan)
+                        @if ($lowongan->pekerjaan == "Web Developer")
+                          <div class="col-5 mb-4">
+                            <div class="d-flex job-field p-3">
+                              <img class="img-jobs" src="Gambar/logo/{{ $lowongan->gambar }}" alt="logo perusahaan">
+                              <div class="align-self-center py-2" style="margin-left: 35px;">
+                                  <h5>{{ $lowongan->pekerjaan }}</h5>
+                                  <p class="desc-jobs" style="margin: 0;">Company : {{ $lowongan->nama_perusahaan }}</p>
+                                  <p class="desc-jobs">Location : {{ $lowongan->lokasi }}</p>
+                                  <a class="btn btn-view" href="/jobs_pencari/{{ $lowongan->id }}">View</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-1" style="width: 30px"></div>
+                        @endif
+                      @endforeach
+                    </div>`;
+        resultJob.innerHTML = item;
+      }
+    </script>
   </body>
 </html>
