@@ -53,13 +53,18 @@
       </div>
     </div>
 
-    <div class="box-gambar" style="background-image: url(/Gambar/6.png);"></div>
+    <div class="box-gambar" style="background-image: url(/Gambar/6.png);">
+      <h3 class="txt-lowongan">Lowongan Pekerjaan</h4>
+    </div>
 
-    <div class="col-9 mx-auto my-4">
+    <div class="col-10 mx-auto my-4">
+      <a href="/jobs_pencari">
+        <img src="/Gambar/arrow-right.png" alt="" width="20px" height="20px" style="transform: rotate(180deg)">
+      </a>
       <div class="d-flex justify-content-center">
         <img class="img-jobs" src="/Gambar/logo/{{ $job->gambar }}" alt="logo perusahaan">
       </div>
-      <div class="my-5">
+      <div class="my-5 mx-5">
         <p class="desc-jobs">Nama Perusahaan : <b>{{ $job->nama_perusahaan }}</b></p>
         <p class="desc-jobs">Posisi : <b>{{ $job->pekerjaan }}</b></p>
         <p class="desc-jobs">Lokasi : <b>{{ $job->lokasi }}</b></p>

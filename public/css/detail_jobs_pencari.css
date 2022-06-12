@@ -34,6 +34,13 @@
 	background-size: cover;
 	height: 90px;
 }
+.txt-lowongan {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 500;
+	color: white;
+	padding-top: 33px;
+	padding-left: 50px;
+}
 
 .job{
 	justify-content: center;

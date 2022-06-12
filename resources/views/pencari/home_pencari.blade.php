@@ -131,7 +131,7 @@
                 <p style="color: rgb(120, 120, 120)">{{ $listJobs[$i]->nama_perusahaan }}</p>
               </div>
               <div class="col-2 text-end">
-                <a href="">
+                <a href="/jobs_pencari/{{ $listJobs[$i]->id }}">
                   <img src="/Gambar/arrow-right.png" alt="" width="75%">
                 </a>
               </div>
