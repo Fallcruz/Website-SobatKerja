@@ -66,19 +66,19 @@
     {{-- Membuat Container yang nantinya berisi item dari news --}}
     <div class="container-fluid">
       {{-- Melakukan perulangan untuk menampilkan seluruh item news yang berada dalam database --}}
-      @foreach ($list as $news)
+      @foreach ($news as $new)
       {{-- Membuat card dengan template bootstrap dengan beberapa sedikit tambahan --}}
       <div class="news-card my-5">
         <div class="d-flex news-field p-1">
           {{-- Memuat gambar news dalam database yang akan di tampilkan di halaman news --}}
-          <img class="img-news" src="/Gambar/{{ $news->gambar }}" alt="" />
+          <img class="img-news" src="/Gambar/{{ $new->gambar }}" alt="" />
           {{-- Memuat judul news dalam database sesuai dengan index yang sedang di looping --}}
           <div class="mx-4">
-            <h5>{{ $news->judul }}</h5>
+            <h5>{{ $new->judul }}</h5>
             {{-- Memaut teks  penulis dan excerpt sesuai index yang di looping dalam database --}}
-            <p><b>Penulis :</b> <i>{{ $news->penulis }}</i><br>{{ $news->excerpt }}</p>
+            <p><b>Penulis :</b> <i>{{ $new->penulis }}</i><br>{{ $new->excerpt }}</p>
             {{-- Membuat tombol Read Now --}}
-            <a href="#" class="btn btn-readnow">Read Now</a>
+            <a href="/news_pencari/{{ $new->id }}" class="btn btn-readnow">Read Now</a>
           </div>
         </div>
       </div>

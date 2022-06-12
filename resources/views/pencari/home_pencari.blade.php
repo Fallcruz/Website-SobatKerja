@@ -160,7 +160,7 @@
                 <p class="m-0" style="color: rgb(120, 120, 120)">{{ $listNews[$i]->created_at }}</p>
               </div>
               <div class="col-2 text-center align-self-center">
-                <a href="">
+                <a href="/news_pencari/{{ $listNews[$i]->id }}">
                   <img src="/Gambar/arrow-right.png" alt="" width="32%">
                 </a>
               </div>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class PencariController extends Controller
 {
+    
     public function update(Request $request,  $pencariKerja){
         $validatedData = $request->validate([
             'name' => 'required',

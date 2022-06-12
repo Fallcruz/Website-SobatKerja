@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginPencariController;
 use App\Http\Controllers\LoginPenyediaController;
+use App\Http\Controllers\BeritaController;
 use App\Models\Berita;
 use App\Models\Lowongan;
 use Illuminate\Support\Facades\Route;
@@ -41,11 +42,9 @@ Route::get('/motivation_pencari', function(){
     return view('pencari.motivation_pencari');
 })->middleware('auth:pencari');
 
-Route::get('/news_pencari', function(){
-    return view('pencari.news_pencari', [
-        'list' => Berita::all()
-    ]);
-})->middleware('auth:pencari');
+// Tour Package
+Route::get('/news_pencari', [BeritaController::class, 'index'])->middleware('auth:pencari');
+Route::get('/news_pencari/{new:id}', [BeritaController::class, 'show'])->middleware('auth:pencari');
 
 Route::get('/video_pencari', function(){
     return view('pencari.video_pencari', [
