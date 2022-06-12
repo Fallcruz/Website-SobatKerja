@@ -57,7 +57,7 @@
       <h3 class="txt-lowongan">Lowongan Pekerjaan</h4>
     </div>
 
-    <div class="col-10 mx-auto my-4">
+    <div class="col-10 container mx-auto my-4">
       <a href="/jobs_pencari">
         <img src="/Gambar/arrow-right.png" alt="" width="20px" height="20px" style="transform: rotate(180deg)">
       </a>
@@ -72,6 +72,8 @@
         <p class="desc-jobs">Kualifikasi : <b>{{ $job->kualifikasi }}</b></p>
         <p class="desc-jobs">Estimasi Gaji : <b>{{ $job->gaji }}</b></p>
         <p class="desc-jobs">Persyaratan : <b>{{ $job->persyaratan }}</b></p>
+        <div style="height: 20px"></div>
+        <a class="btn btn-view" href="">Lamar Sekarang</a>
       </div>
     </div>
 

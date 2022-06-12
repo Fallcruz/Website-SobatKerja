@@ -81,68 +81,6 @@
       <h3 class="txt-video">Video</h4>
     </div>
     <br />
-    {{-- Membuat container dan row untuk melihat item video --}}
-    <div class="container">
-      <div class="row">
-        {{-- Membuat card item video pertama --}}
-        <div class="col-4">
-          <div class="card">
-            {{-- Memuat gambar video pertama --}}
-            <img src="Gambar/img-video-1.png" class="card-img-top" alt="" />
-            {{-- Memuat Card body yang berisi informasi video --}}
-            <div class="card-body">
-              {{-- Membuat Teks judul video dan keterangan video --}}
-              <h5 class="card-title">Tips Bekerja Dengan Cerdas</h5>
-              <p
-                class="card-text"
-                style="font-size: 12px; color: rgb(100, 100, 100);"
-              >
-                1 jam yang lalu <br />Credit : Christopher
-              </p>
-            </div>
-          </div>
-        </div>
-        {{-- Membuat card item video kedua --}}
-        <div class="col-4">
-          <div class="card">
-            {{-- Memuat gambar video kedua --}}
-            <img src="Gambar/img-video-2.png" class="card-img-top" alt="" />
-            {{-- Memuat Card body yang berisi informasi video --}}
-            <div class="card-body">
-              {{-- Membuat Teks judul video dan keterangan video --}}
-              <h5 class="card-title">
-                Tips Maksimal Bekerja Dari Rumah
-              </h5>
-              <p
-                class="card-text"
-                style="font-size: 12px; color: rgb(100, 100, 100);"
-              >
-                6 jam yang lalu <br />Credit : Nolan
-              </p>
-            </div>
-          </div>
-        </div>
-        {{-- Membuat Teks judul video dan keterangan ketiga --}}
-        <div class="col-4">
-          <div class="card">
-            {{-- Memuat gambar video ketiga --}}
-            <img src="Gambar/img-video-3.png" class="card-img-top" alt="" />
-            {{-- Memuat Card body yang berisi informasi video --}}
-            <div class="card-body">
-              {{-- Membuat Teks judul video dan keterangan video --}}
-              <h5 class="card-title">Tips Agar Fokus Dalam Bekerja</h5>
-              <p
-                class="card-text"
-                style="font-size: 12px; color: rgb(100, 100, 100);"
-              >
-                3 hari yang lalu <br />Credit : Mulan
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="container my-3">
       <div class="row justify-content-center">
         @foreach ($list as $video)

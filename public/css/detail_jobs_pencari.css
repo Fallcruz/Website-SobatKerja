@@ -53,3 +53,16 @@
 	font-size: 20px;
     margin-bottom: 10px;
 }
+.container .btn-view {
+    background-color: rgb(27, 108, 167);
+    color: white;
+    font-family: "Work Sans";
+	font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.container .btn-view:hover {
+    color: white;
+}
