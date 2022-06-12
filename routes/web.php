@@ -42,7 +42,6 @@ Route::get('/motivation_pencari', function(){
     return view('pencari.motivation_pencari');
 })->middleware('auth:pencari');
 
-// Tour Package
 Route::get('/news_pencari', [BeritaController::class, 'index'])->middleware('auth:pencari');
 Route::get('/news_pencari/{new:id}', [BeritaController::class, 'show'])->middleware('auth:pencari');
 
