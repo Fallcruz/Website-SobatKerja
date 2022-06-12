@@ -53,12 +53,13 @@ class LowonganController extends Controller
         $validatedData = $this->validateData($request);
 
         $validatedData['gambar'] = $this->uploadImage($request);
+        $validatedData['penyedia_kerja_id'] = auth('penyedia')->user()->id;
 
         $this->lowongan->store($validatedData);
         return redirect('/input_lowongan')->with('success', 'Data berhasil disimpan');
     }
 
     public function show(Lowongan $job){
-        return view('pencari.detail_jobs_pencari', ['job' => $job]);
+        return view('penyedia.detail_lowongan', ['job' => $job]);
     }
 }

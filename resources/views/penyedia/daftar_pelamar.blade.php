@@ -22,13 +22,16 @@
         >
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item me-4">
-            <a class="nav-link active" href="/home_penyedia">Your Profile</a>
+            <a class="nav-link" href="/home_penyedia">Your Profile</a>
           </li>
           <li class="nav-item me-4">
             <a class="nav-link" href="/input_lowongan">Input Lowongan</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="">Daftar Pelamar</a>
+            <a class="nav-link active" href="/daftar_pelamar">Daftar Pelamar</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link" href="/penyedia/list-lowongan">Daftar Lowongan</a>
           </li>
           <li class="nav-item me-2">
             <form action="/signout_penyedia" method="POST">
