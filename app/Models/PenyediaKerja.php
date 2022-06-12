@@ -11,4 +11,8 @@ class PenyediaKerja extends Authenticatable
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    public function lowongans(){
+        return $this->hasMany(Lowongan::class, 'penyedia_kerja_id');
+    }
 }

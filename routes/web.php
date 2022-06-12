@@ -23,14 +23,6 @@ use App\Models\Video;
 |
 */
 
-// Route::get('/login_pencari', function(){
-//     return view('pencari.login_pencari');
-// });
-
-// Route::get('/register_pencari', function(){
-//     return view('pencari.register_pencari');
-// });
-
 Route::get('/home_pencari', function(){
     return view('pencari.home_pencari', [
         'listJobs' => Lowongan::all(),
@@ -50,6 +42,7 @@ Route::get('/video_pencari', function(){
         'list' => Video::all()
     ]);
 })->middleware('auth:pencari');
+
 Route::get('/your_profile', function(){
     return view('pencari.profil_pencari');
 })->middleware('auth:pencari');
@@ -82,6 +75,7 @@ Route::get('/daftar_pelamar', function () {
 })->middleware('auth:penyedia');
 
 Route::get('/jobs_pencari', [LowonganController::class, 'index'])->middleware('auth:pencari');
+Route::get('/jobs_pencari/{job:id}', [LowonganController::class, 'show'])->middleware('auth:pencari');
 Route::get('/input_lowongan', [LowonganController::class, 'createLowongan'])->middleware('auth:penyedia');
 Route::post('/input_lowongan', [LowonganController::class, 'storeData'])->middleware('auth:penyedia');
 
@@ -93,3 +87,10 @@ Route::get('/login-pencari', [LoginPencariController::class, 'index'])->name('lo
 Route::post('/signout-pencari', [LoginPencariController::class, 'signout']);
 
 Route::patch('/update_pencari/{pencariKerja}', [PencariController::class, 'update']);
+
+
+
+
+Route::get('/test-lowongan', [RegisterPenyediaController::class, 'testLowongan']);
+Route::get('/lowongan-yang-didaftar', [RegisterPenyediaController::class, 'lowonganYangDiDaftar']);
+Route::get('/pencari-yang-mendaftar-lowongan', [RegisterPenyediaController::class, 'pencariYangMendaftarLowongan']);
