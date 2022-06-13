@@ -80,7 +80,7 @@
                     <img src="/Gambar/logo/{{ $lists->gambar }}" width="120px">
                   </div>
                   <div class="col-7 align-self-center" style="padding-left: 5px;">
-                    <h5><a href="" class="text-decoration-none" style="color: black">{{ $lists->pekerjaan }}</a></h5>
+                    <h5><a href="/jobs_pencari/{{ $lists->id }}" class="text-decoration-none" style="color: black">{{ $lists->pekerjaan }}</a></h5>
                     <p class="desc-jobs" style="margin: 0;">Company : <span class="cardField">{{ $lists->nama_perusahaan }}</span></p>
                     <p class="desc-jobs">Location : <span class="cardField">{{ $lists->lokasi }}</span></p>
                   </div>
@@ -101,7 +101,7 @@
                       <img src="/Gambar/logo/{{ $lists->gambar }}" width="120px">
                     </div>
                     <div class="col-7 align-self-center" style="padding-left: 5px;">
-                      <h5><a href="" class="text-decoration-none" style="color: black">{{ $lists->pekerjaan }}</a></h5>
+                      <h5><a href="/jobs_pencari/{{ $lists->id }}" class="text-decoration-none" style="color: black">{{ $lists->pekerjaan }}</a></h5>
                       <p class="desc-jobs" style="margin: 0;">Company : <span class="cardField">{{ $lists->nama_perusahaan }}</span></p>
                       <p class="desc-jobs">Location : <span class="cardField">{{ $lists->lokasi }}</span></p>
                     </div>
