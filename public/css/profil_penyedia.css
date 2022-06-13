@@ -52,7 +52,5 @@
     text-decoration: none;
 }
 .container .btn-simpan:hover {
-    background-color: white;
-    color: rgb(27, 108, 167);
-    border: 2px solid rgb(27, 108, 167);
+    color: white;
 }
