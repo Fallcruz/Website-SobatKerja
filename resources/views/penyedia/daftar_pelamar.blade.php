@@ -50,7 +50,7 @@
     </div>
     <div class="container my-4">
       <div class="row">
-        {{-- @foreach ($pelamars as $pelamar)
+        @foreach ($pelamars as $pelamar)
           <div class="col-3 cardJob me-4">
             <div class="container py-3 text-center" style="height: 200px">
               <img src="/Gambar/pic-profile-avatar.png" alt="" width="85%">
@@ -69,7 +69,7 @@
               </div>
             </div>
           </div>
-        @endforeach --}}
+        @endforeach
       </div>
     </div>
     <br><br><br>

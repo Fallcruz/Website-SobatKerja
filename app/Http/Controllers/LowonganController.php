@@ -81,9 +81,9 @@ class LowonganController extends Controller
         ]);
     }
 
-    public function daftarPelamarLowongan(){
+    public function daftarPelamarLowongan(Lowongan $job){
         return view('penyedia.daftar_pelamar', [
-            'pelamars' => Lowongan::where('id', '=', )->first()->pencariKerjas,
+            'pelamars' => Lowongan::where('id', '=', $job->id)->first()->pencariKerjas,
         ]);
     }
 }

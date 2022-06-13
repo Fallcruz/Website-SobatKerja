@@ -65,11 +65,7 @@
         <p class="desc-jobs">Estimasi Gaji : <b>{{ $job->gaji }}</b></p>
         <p class="desc-jobs">Persyaratan : <b>{{ $job->persyaratan }}</b></p>
         <div style="height: 20px"></div>
-        <form action="/daftar_pelamar" method="GET">
-          @csrf
-          <input type="hidden" value="{{ $job->id }}" name="id">
-          <button class="btn btn-view" href="">Daftar Pelamar</button>
-        </form>
+        <a class="btn btn-view" href="/penyedia/list-lowongan/{{ $job->id }}/daftar-pelamar">Daftar Pelamar</a>
       </div>
     </div>
 

@@ -139,8 +139,8 @@ class DatabaseSeeder extends Seeder
             'lowongan_id' => $lowongan4->id
         ]);
         DB::table('apply_lowongan')->insert([
-            'pencari_kerja_id' => $pencari2->id,
-            'lowongan_id' => $lowongan5->id
+            'pencari_kerja_id' => $pencari1->id,
+            'lowongan_id' => $lowongan4->id
         ]);
         Berita::create([
             'judul' => '5 Advantages of Working in a Small Company, More Achievements!',
