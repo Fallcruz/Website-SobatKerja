@@ -29,10 +29,4 @@ class RegisterPenyediaController extends Controller
         
         return redirect('/login_penyedia');
     }
-
-    public function pencariYangMendaftarLowongan(){
-        return response()->json([
-            'pencari_kerjas' => Lowongan::where('id', '=', 1)->first()->pencariKerjas,
-        ]);
-    }
 }

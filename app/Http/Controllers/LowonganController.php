@@ -80,4 +80,10 @@ class LowonganController extends Controller
             'jobsSearch' => $jobsResult
         ]);
     }
+
+    public function daftarPelamarLowongan(){
+        return response()->json([
+            'pencari_kerjas' => Lowongan::where('id', '=', 1)->first()->pencariKerjas,
+        ]);
+    }
 }
