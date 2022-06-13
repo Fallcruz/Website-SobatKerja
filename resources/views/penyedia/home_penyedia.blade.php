@@ -29,9 +29,6 @@
             <a class="nav-link" href="/input_lowongan">Input Lowongan</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link" href="/daftar_pelamar">Daftar Pelamar</a>
-          </li>
-          <li class="nav-item me-4">
             <a class="nav-link" href="/penyedia/list-lowongan">Daftar Lowongan</a>
           </li>
           <li class="nav-item me-2">

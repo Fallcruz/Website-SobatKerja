@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SobatKerja - Daftar Pelamar</title>
     <link rel="stylesheet" href="/css/profil_penyedia.css" />
+    <link rel="stylesheet" href="/css/home_pencari.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -28,10 +29,7 @@
             <a class="nav-link" href="/input_lowongan">Input Lowongan</a>
           </li>
           <li class="nav-item me-4">
-            <a class="nav-link active" href="/daftar_pelamar">Daftar Pelamar</a>
-          </li>
-          <li class="nav-item me-4">
-            <a class="nav-link" href="/penyedia/list-lowongan">Daftar Lowongan</a>
+            <a class="nav-link active" href="/penyedia/list-lowongan">Daftar Lowongan</a>
           </li>
           <li class="nav-item me-2">
             <form action="/signout_penyedia" method="POST">
@@ -52,19 +50,13 @@
       <div class="row">
         @foreach ($pelamars as $pelamar)
           <div class="col-3 cardJob me-4">
-            <div class="container py-3 text-center" style="height: 200px">
-              <img src="/Gambar/pic-profile-avatar.png" alt="" width="85%">
-            </div>
-            <div class="container px-2">
-              <h5>{{ $pelamar->name }}</h5>
+            <div class="container px-2 py-2">
+              <h5 class="pt-3">{{ $pelamar->name }}</h5>
               <div class="row d-flex justify-content-between">
-                <div class="col-10 ps-3">
+                <div class="col-10 ps-3 pt-3">
                   <p style="color: rgb(120, 120, 120)">{{ $pelamar->email }}</p>
-                </div>
-                <div class="col-2 text-end">
-                  <a href="/jobs_pencari/{{ $pelamar->skill }}">
-                    <img src="/Gambar/arrow-right.png" alt="" width="75%">
-                  </a>
+                  <p style="color: rgb(120, 120, 120)">{{ $pelamar->skill }}</p>
+                  <p style="color: rgb(120, 120, 120)">{{ $pelamar->phone_number }}</p>
                 </div>
               </div>
             </div>
