@@ -97,6 +97,7 @@ Route::get('/login-pencari', [LoginPencariController::class, 'index'])->name('lo
 Route::post('/signout-pencari', [LoginPencariController::class, 'signout']);
 
 Route::patch('/update_pencari/{pencariKerja}', [PencariController::class, 'update']);
+Route::patch('/update_penyedia/{penyediaKerja}', [PenyediaController::class, 'update']);
 
 Route::get('/penyedia/list-lowongan', [PenyediaController::class, 'listLowongan']);
 Route::get('/penyedia/list-lowongan/{job:id}', [PenyediaController::class, 'show']);

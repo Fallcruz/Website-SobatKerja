@@ -58,7 +58,7 @@
 
     {{-- Membuat form yang menampung data dari akun user untuk ditampilkan dan dapat di edit sesuai keinginan --}}
     <div class="container col-lg-7 mx-auto mt-4"> 
-      <form action="/update_pencari/{{ auth()->user()->id }}" method="POST" enctype="multipart/form-data">
+      <form action="/update_penyedia/{{ auth()->user()->id }}" method="POST" enctype="multipart/form-data">
         @method('patch')
         @csrf
         <div class="row">
