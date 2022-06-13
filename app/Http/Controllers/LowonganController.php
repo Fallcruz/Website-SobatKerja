@@ -62,4 +62,11 @@ class LowonganController extends Controller
     public function show(Lowongan $job){
         return view('pencari.detail_jobs_pencari', ['job' => $job]);
     }
+
+    public function search(Request $request){
+        $jobsPosition = $request->input('position');
+        return view('pencari.search_jobs', [
+            'jobsSearch' => Lowongan::where('pekerjaan', $jobsPosition)->get()
+        ]);
+    }
 }

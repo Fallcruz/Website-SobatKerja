@@ -73,8 +73,7 @@
     <h4 class="my-4" style="font-weight:400; padding-left: 50px;">Lowongan Pekerjaan :</h4>
     <div class="container" id="listJob">
       <div class="row">
-        {{-- melakukan looping untuk mendapatkan data dari database --}}
-        @foreach ($list as $lowongan)
+        @foreach ($jobsSearch as $lowongan)
           <div class="col-5 mb-4">
             <div class="d-flex job-field p-3">
               <img class="img-jobs" src="Gambar/logo/{{ $lowongan->gambar }}" alt="logo perusahaan">
@@ -92,6 +91,5 @@
     </div>
     
     <br><br><br><br><br>
-
   </body>
 </html>

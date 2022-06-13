@@ -83,6 +83,7 @@ Route::get('/daftar_pelamar', function () {
 
 Route::get('/jobs_pencari', [LowonganController::class, 'index'])->middleware('auth:pencari');
 Route::get('/jobs_pencari/{job:id}', [LowonganController::class, 'show'])->middleware('auth:pencari');
+Route::post('/search_jobs', [LowonganController::class, 'search'])->middleware('auth:pencari');
 
 Route::get('/input_lowongan', [LowonganController::class, 'createLowongan'])->middleware('auth:penyedia');
 Route::post('/input_lowongan', [LowonganController::class, 'storeData'])->middleware('auth:penyedia');
