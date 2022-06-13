@@ -65,7 +65,7 @@
 
     {{-- Membuat profile picture user --}}
     <div class="container mx-auto mt-3 text-center">
-      <img src="/Gambar/pic-profile.png" width="200px">
+      <img src="/Gambar/pic-profile-avatar.png" width="200px">
       <h3 class="mt-3">{{ auth('pencari')->user()->name }}</h3>
     </div>
 

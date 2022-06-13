@@ -48,7 +48,30 @@
     <div class="box-profile" style="background-image: url(/Gambar/5.png);">
       <h3 class="txt-profile">Daftar Pelamar</h4>
     </div>
-
+    <div class="container my-4">
+      <div class="row">
+        {{-- @foreach ($pelamars as $pelamar)
+          <div class="col-3 cardJob me-4">
+            <div class="container py-3 text-center" style="height: 200px">
+              <img src="/Gambar/pic-profile-avatar.png" alt="" width="85%">
+            </div>
+            <div class="container px-2">
+              <h5>{{ $pelamar->name }}</h5>
+              <div class="row d-flex justify-content-between">
+                <div class="col-10 ps-3">
+                  <p style="color: rgb(120, 120, 120)">{{ $pelamar->email }}</p>
+                </div>
+                <div class="col-2 text-end">
+                  <a href="/jobs_pencari/{{ $pelamar->skill }}">
+                    <img src="/Gambar/arrow-right.png" alt="" width="75%">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        @endforeach --}}
+      </div>
+    </div>
     <br><br><br>
   </body>
 </html>

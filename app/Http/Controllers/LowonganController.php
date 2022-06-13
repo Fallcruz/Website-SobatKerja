@@ -82,8 +82,8 @@ class LowonganController extends Controller
     }
 
     public function daftarPelamarLowongan(){
-        return response()->json([
-            'pencari_kerjas' => Lowongan::where('id', '=', 1)->first()->pencariKerjas,
+        return view('penyedia.daftar_pelamar', [
+            'pelamars' => Lowongan::where('id', '=', )->first()->pencariKerjas,
         ]);
     }
 }
