@@ -65,8 +65,19 @@ class LowonganController extends Controller
 
     public function search(Request $request){
         $jobsPosition = $request->input('position');
+        $jobsLocation = $request->input('location');
+        if ($jobsPosition != null && $jobsLocation != null) {
+            $jobsResult = Lowongan::where('pekerjaan', $jobsPosition)->where('lokasi', $jobsLocation)->get();
+        } else if ($jobsPosition != null && $jobsLocation == null){
+            $jobsResult = Lowongan::where('pekerjaan', $jobsPosition)->get();
+        } else if ($jobsLocation != null && $jobsPosition == null){
+            $jobsResult = Lowongan::where('lokasi', $jobsLocation)->get();
+        } else {
+            $jobsResult = Lowongan::all();
+        }
+        
         return view('pencari.search_jobs', [
-            'jobsSearch' => Lowongan::where('pekerjaan', $jobsPosition)->get()
+            'jobsSearch' => $jobsResult
         ]);
     }
 }

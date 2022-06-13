@@ -35,6 +35,13 @@ class DatabaseSeeder extends Seeder
             'location' => 'Jakarta Barat',
         ]);
 
+        $penyedia3 = PenyediaKerja::create([
+            'company_name' => 'Tokopedia',
+            'email' => 'graphic.rizky17@gmail.com',
+            'password' => Hash::make('password'),
+            'location' => 'Jakarta',
+        ]);
+
         $pencari1 = PencariKerja::create([
             'name' => 'Kadek Rizky Fransisca Putra',
             'email' => 'rizky.royal@gmail.com',
@@ -51,12 +58,18 @@ class DatabaseSeeder extends Seeder
             'phone_number' => '081938713808'
         ]);
 
-        
+        $pencari3 = PencariKerja::create([
+            'name' => 'Rizky Khoiruddin',
+            'email' => 'graphic.rizky17@gmail.com',
+            'password' => Hash::make('password'),
+            'skill' => 'Frontend Developer',
+            'phone_number' => '081310101010'
+        ]);
 
         $lowongan1 = Lowongan::create([
             'pekerjaan' => 'Web Developer',
             'nama_perusahaan' => 'Modernland Indonesia',
-            'lokasi' => 'Jakarta',
+            'lokasi' => 'Tangerang',
             'pengalaman' => '2 tahun',
             'kualifikasi' => 'Sarjana (S1)',
             'gaji' => 7000000,
@@ -84,7 +97,7 @@ class DatabaseSeeder extends Seeder
             'gaji' => 4000000,
             'persyaratan' => 'Menguasai bidang Software Engineer',
             'gambar' => '1652448333logo-tokopedia.png',
-            'penyedia_kerja_id' =>  $penyedia1->id
+            'penyedia_kerja_id' =>  $penyedia3->id
         ]);
         $lowongan4 = Lowongan::create([
             'pekerjaan' => 'Backend Developer',

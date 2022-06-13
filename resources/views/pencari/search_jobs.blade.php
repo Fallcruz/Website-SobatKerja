@@ -63,7 +63,7 @@
         <form action="/search_jobs" method="POST">
           @csrf
           <input type="text" class="jobs-pencarian my-3" placeholder="Bidang Pekerjaan" name="position" id="position" style="margin-left: 210px;">
-          <input type="search" class="jobs-pencarian my-3 mx-2" placeholder="Kota, Provinsi, Negara" name="location" id="location">
+          <input type="text" class="jobs-pencarian my-3 mx-2" placeholder="Kota, Provinsi, Negara" name="location" id="location">
           <button class="jobs-btn">Find Jobs</button>
         </form>
       </div>
