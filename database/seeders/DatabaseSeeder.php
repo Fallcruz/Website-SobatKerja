@@ -62,7 +62,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Rizky Khoiruddin',
             'email' => 'graphic.rizky17@gmail.com',
             'password' => Hash::make('password'),
-            'skill' => 'Frontend Developer',
+            'skill' => 'Software Engineer',
             'phone_number' => '081310101010'
         ]);
 
